@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"></script>
+   
+    <link rel="stylesheet" href="bootstrap.css">
+   
+    <link rel="stylesheet" href="Header.css"> 
+    <link rel="stylesheet" href="Electronics.css">  
+    <link rel="stylesheet" href="Footer.css">
+   
+    
+</head>
+  <style>
+      .btn{
+         color: black;
+      }
+      .remove-icon button {
+        color: white;
+
+      }
+      .remove-icon button{
+        border: none;
+        background-color: white;
+      }
+      .notification-icon a{
+         text-decoration: none;
+      }
+
+  </style>
+<body>
+    
+    
+
+    <div class="page-head container-fluid d-flex   align-items-center">
+       <div class="page-title text-light mx-auto" style="font-variant:small-caps;"><i>Pic Ur Things</i></div>
+        <div class="page-head-info d-flex align-items-center gap-5">
+             
+             <div class="notification-icon">
+               <span class="">
+
+               </span>
+                <a href="Cart_Page.html"><i class="fa fa-solid fa-bell text-light "></i></a>
+             </div>
+             <div class="no-of-days text-light ">
+               <i class="fa fa-solid fa-fire ""></i>
+               <span>0</span>
+
+             </div>
+             
+
+        </div>
+       
+   </div>
+   
+   <div class="user-details text-start p-5  text-primary bg-light shadow">
+           <div class="user-title text-center">User info</div>
+           <div class="user-name py-5">User  :<input class="form-control" type="text" value="Ganesh"  readonly></div>
+           <div class="user-id">ID : <input class="form-control" type="text" value=""  readonly> </div>
+           <div class="text-center my-3"><button class="btn btn-primary log-out ">Logout</button></div>
+   </div>
+
+ 
+
+       <!--user info-->
+
+
+
+   <div class="Buying_product  ">
+    <div class=" d-flex  gap-3  flex-column align-items-center justify-content-center" >
+       <div class="  card bg-light ">
+           <div class="img-title text-warning text-center py-3">Iphone 13</div>
+            <div class="product-img  ">
+                <img  src="https://m.media-amazon.com/images/I/31jQ91XUDhS._SY445_SX342_QL70_FMwebp_.jpg" alt="">
+            </div>
+            <div class=" card-body product-content  d-flex ">
+
+                <div class="que">
+                    <div class="pro-id text-warning  series">Series :</div>
+                    <div class="pro-id text-warning ">Orginal price :</div>
+                    <div class="pro-id text-warning  ">Selling Price :</div>
+                    <div class="pro-id text-warning ">Rating : </div>
+                    
+                </div>
+                <div class="ans">
+                    <div class="pro-id text-warning  series">Iphone</div>
+                    <div class="pro-id text-warning  org"><strong style="text-decoration: line-through;color: red;">$ 499.0</strong> </span></div>
+                    <div class="pro-id text-warning  sel"><span style="font-size: 23px;font-weight: 80px; color: green;">$ 399.0</span> <button class="btn btn-success btn-pills  px-3 d-none ">20% off</button> </div>
+                    <div class="pro-id text-warning "><i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span></div>
+                  
+                </div>
+            </div>
+            <div class="card-footer mx-auto py-3">
+                <button class="btn btn-danger  btn_cancel px-4" ><i class="fa fa-solid fa-xmark"></i>Cancel</button>
+                <button class="btn btn-warning  btn_hold px-4"><i class="fa fa-solid fa-hand"></i>Hold</button>
+                <button class="btn btn-success  btn_conform px-4"><i class="fa fa-solid fa-check"></i>Conform</button>
+            </div>
+       </div>
+    </div>
+    
+
+</div>
+</div><!--Buyinf inteface-->
+    <div class="page  text-dark " >
+          
+        <div class="navbar1 "> 
+             
+                <div class="heading-session text-dark "  >
+                       Pick ur Brand
+                 </div>
+                
+                  
+        </div>
+
+        <div class="mobile-stock   my-2  ">
+            <div class="head1-bar my-4" style=" background-image: linear-gradient(to left, rgb(27, 7, 88) , rgb(35, 82, 238))">
+                <div class="head-bar-content d-flex align-items-center ">
+                   <div class="title px-5 w-100  text-light d-flex gap-3 "><span class="d-none d-lg-block">Mobile</span> Top Brands</div>
+                   <div class="for-more w-100 text-end px-5"> <button class="btn btn-outline-light ">for more<i class="fa fa-solid fa-hand-point-right px-2 text-primary"></i></button></div>
+                </div>
+             </div>
+           <div class="row d-sm-flex flex-lg-row flex-warp  ">
+                 <div class="col  px-5 ">
+                       <div class="item border ">
+                       
+                           <div class="item-img">
+                                    <img  src="https://m.media-amazon.com/images/I/51RkaC8EsoL._AC_UY218_.jpg" alt="...">
+                                    
+                            </div>
+                            <div class="remove-icon "><button onclick="remove_me('Item10G','15000')"><i class="fa fa-solid fa-circle-xmark"></i></button></div>
+                   
+                            <div class="item-content ">
+                              
+                               <div class="item-title">Realme</div>
+                               <div class="model">10G</div>
+                                <div class="item text">
+                                    <button class="btn btn-success btn-pills  p-1 ">In stock</button> <button class="btn btn-info btn-pills  p-1" id="Item10G" onclick="notify(this.id,15000)">Notify</button> <br>
+                                    <span><strong style="text-decoration: line-through;color: red;">INR 1799.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 15000.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                    <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                                    <div class="item-footer  text-center py-3 ">
+                                        <button class="btn btn-outline-success mx-4 buy"  id="">Buy</button>
+                                        <button class="btn btn-outline-secondary" id="">Hold</button>
+                                    </div>
+
+                                </div>
+                               
+                              
+                           </div>
+                       
+                       </div>
+                     
+                       
+                 </div>
+                 <div class="col  px-5  my-2">
+                    <div class="item border">
+                        
+                        <div class="item-img "><img src="https://m.media-amazon.com/images/I/31jQ91XUDhS._SY445_SX342_QL70_FMwebp_.jpg" alt="..."></div>
+                        <div class="remove-icon "><button onclick="remove_me('Item13','45000')"><i class="fa fa-solid fa-circle-xmark"></i></button></div>
+                   
+                        <div class="item-content">
+                             <div class="item-title">Iphone</div>
+                             <div class="model">13</div>
+                             <div class="item text">
+                                <button class="btn btn-success btn-pills  p-1">In stock</button> <button class="btn btn-info btn-pills  p-1" id="Item13" onclick="notify(this.id,45000)" >Notify</button> <br>
+                                    <span><strong style="text-decoration: line-through;color: red;">INR 50000.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 45000.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                    <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                                   <div class="item-footer  text-center py-3">
+                                        <button class="btn btn-outline-success mx-4 buy"  id="">Buy</button>
+                                        <button class="btn btn-outline-secondary" id="">Hold</button>
+                                    </div>
+                             </div>
+                           
+                        </div>
+                    </div>
+
+                 </div>
+                 <div class="col  px-5  my-2 ">
+                     <div class="item border">
+                        
+                        <div class="item-img"><img src="https://m.media-amazon.com/images/I/51h4cvoEdHL._SX679_.jpg" alt="..."></div>
+                        <div class="remove-icon "><button onclick="remove_me('Item11R','25000')"><i class="fa fa-solid fa-circle-xmark"></i></button></div>
+                   
+                        <div class="item-content">
+                             <div class="item-title">One plus</div>
+                             <div class="model">11R</div>
+                             <div class="item text"><button class="btn btn-success btn-pills  p-1 ">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Item11R" onclick="notify(this.id,25000)">Notify</button> <br>
+                                <span><strong style="text-decoration: line-through;color: red;">INR 29000.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 25000.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                               <div class="item-footer text-center py-3">
+                                    <button class="btn btn-outline-success mx-4 buy"  id="">Buy</button>
+                                    <button class="btn btn-outline-secondary" id="">Hold</button>
+                                </div>
+
+                             </div>
+                            
+                        </div>
+                    </div>
+
+                 </div>
+                 <div class="col px-5 my-2">
+                
+                    <div class="item border ">
+                       
+                        <div class="item-img"><img src="https://m.media-amazon.com/images/I/311AbPdwjzL.jpg" alt="..."></div>
+                        <div class="remove-icon "><button onclick="remove_me('Item1E30','12000')"><i class="fa fa-solid fa-circle-xmark"></i></button></div>
+                        <div class="item-content">
+                             <div class="item-title">Motorola</div>
+                             <div class="model">Edge30</div>
+                             <div class="item text">
+                                <button class="btn btn-success btn-pills  p-1 ">In stock</button> <button class="btn btn-info btn-pills  p-1 "id="Item1E30" onclick="notify(this.id,12000)">Notify</button> <br>
+                                    <span><strong style="text-decoration: line-through;color: red;">INR 15000.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 12000.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                    <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                                   <div class="item-footer  text-center py-3">
+                                        <button class="btn btn-outline-success mx-4 buy"  id="">Buy</button>
+                                        <button class="btn btn-outline-secondary" id="">Hold</button>
+                                    </div>
+                             </div>
+                             
+                        </div>
+                    </div>
+
+                 </div>
+               
+                 
+            </div>
+
+                
+        </div><!--mobile sales-->
+
+
+
+
+        <div class="Best-sales my-2   ">
+            <h2 class="-mobiles-title p-3 ">Best offers on mobiles</h2>
+           <div class="row d-sm-flex flex-lg-row flex-warp  ">
+                 <div class="col  px-5 ">
+                       <div class="item border ">
+                           <div class="item-img"><img src="Menuimg.jpg" alt="..."></div>
+                           <div class="item-content ">
+                                <div class="item-title">Realme</div>
+                                <div class="item text">
+                                    <button class="btn btn-success btn-pills  p-1 ">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                    <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                    <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                                    <div class="item-footer  text-center py-3 ">
+                                        <button class="btn btn-outline-success mx-4 buy"  id="">Buy</button>
+                                        <button class="btn btn-outline-secondary" id="">Hold</button>
+                                    </div>
+
+                                </div>
+                               
+                              
+                           </div>
+                       
+                       </div>
+                     
+                       
+                 </div>
+                 <div class="col  px-5  my-2">
+                    <div class="item border">
+                        <div class="item-img "><img src="Menuimg.jpg" alt="..."></div>
+                        <div class="item-content">
+                             <div class="item-title">Realme</div>
+                             <div class="item text">
+                                <button class="btn btn-success btn-pills  p-1 ">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                    <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                    <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                                   <div class="item-footer  text-center py-3">
+                                        <button class="btn btn-outline-success mx-4 buy"  id="">Buy</button>
+                                        <button class="btn btn-outline-secondary" id="">Hold</button>
+                                    </div>
+                             </div>
+                           
+                        </div>
+                       
+
+                    </div>
+
+                 </div>
+                 <div class="col  px-5  my-2 ">
+                    <div class="item border">
+                        <div class="item-img"><img src="Menuimg.jpg" alt="..."></div>
+                        <div class="item-content">
+                             <div class="item-title">Realme</div>
+                             <div class="item text"><button class="btn btn-success btn-pills  p-1">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                               <div class="item-footer text-center py-3">
+                                    <button class="btn btn-outline-success mx-4 buy"  id="">Buy</button>
+                                    <button class="btn btn-outline-secondary" id="">Hold</button>
+                                </div>
+
+                             </div>
+                            
+                        </div>
+                    </div>
+
+                 </div>
+                 <div class="col px-5 my-2">
+                    <div class="item border ">
+                        <div class="item-img"><img src="Menuimg.jpg" alt="..."></div>
+                        <div class="item-content">
+                             <div class="item-title">Realme</div>
+                             <div class="item text">
+                                <button class="btn btn-success btn-pills  p-1 buy">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                    <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                    <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                                   <div class="item-footer  text-center py-3">
+                                        <button class="btn btn-outline-success mx-4"  id="">Buy</button>
+                                        <button class="btn btn-outline-secondary" id="">Hold</button>
+                                    </div>
+                             </div>
+                             
+                        </div>
+                    </div>
+
+                 </div>
+               
+            </div>
+
+                
+        </div><!--Best-sales-->
+
+        
+
+
+        <div class="Discount-sales my-2   ">
+            <h2 class="-mobiles-title p-3 ">Flat upto 30% discount</h2>
+           <div class="row d-sm-flex flex-lg-row flex-warp  ">
+                 <div class="col  px-5 ">
+                       <div class="item border ">
+                           <div class="item-img"><img src="Menuimg.jpg" alt="..."></div>
+                           <div class="item-content ">
+                               <div class="item-title">Realme</div>
+                                <div class="item text">
+                                    <button class="btn btn-success btn-pills  p-1 buy">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                    <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                    <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                                    <div class="item-footer  text-center py-3  ">
+                                        <button class="btn btn-outline-success mx-4"  id="">Buy</button>
+                                        <button class="btn btn-outline-secondary" id="">Hold</button>
+                                    </div>
+
+                                </div>
+                               
+                              
+                           </div>
+                       
+                       </div>
+                     
+                       
+                 </div>
+                 <div class="col  px-5  my-2">
+                    <div class="item border">
+                        <div class="item-img "><img src="Menuimg.jpg" alt="..."></div>
+                        <div class="item-content">
+                             <div class="item-title">Realme</div>
+                             <div class="item text">
+                                <button class="btn btn-success btn-pills  p-1 buy">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                    <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                    <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                                   <div class="item-footer  text-center py-3">
+                                        <button class="btn btn-outline-success mx-4"  id="">Buy</button>
+                                        <button class="btn btn-outline-secondary" id="">Hold</button>
+                                    </div>
+                             </div>
+                           
+                        </div>
+                       
+
+                    </div>
+
+                 </div>
+                 <div class="col  px-5  my-2 ">
+                    <div class="item border">
+                        <div class="item-img"><img src="Menuimg.jpg" alt="..."></div>
+                        <div class="item-content">
+                             <div class="item-title">Realme</div>
+                             <div class="item text"><button class="btn btn-success btn-pills  p-1 ">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                               <div class="item-footer text-center py-3">
+                                    <button class="btn btn-outline-success mx-4 buy"  id="">Buy</button>
+                                    <button class="btn btn-outline-secondary" id="">Hold</button>
+                                </div>
+
+                             </div>
+                            
+                        </div>
+                    </div>
+
+                 </div>
+                 <div class="col px-5 my-2">
+                    <div class="item border ">
+                        <div class="item-img"><img src="Menuimg.jpg" alt="..."></div>
+                        <div class="item-content">
+                             <div class="item-title">Realme</div>
+                             <div class="item text">
+                                <button class="btn btn-success btn-pills  p-1 ">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                    <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                    <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                                   <div class="item-footer  text-center py-3">
+                                        <button class="btn btn-outline-success mx-4 buy"  id="">Buy</button>
+                                        <button class="btn btn-outline-secondary" id="">Hold</button>
+                                    </div>
+                             </div>
+                             
+                        </div>
+                    </div>
+
+                 </div>
+                
+            </div>
+
+                
+        </div>
+
+
+        <div class="Discount-sales my-2   ">
+            <h2 class="-mobiles-title p-3 ">Flat upto 30% discount</h2>
+           <div class="row d-sm-flex flex-lg-row flex-warp  ">
+                 <div class="col  px-5 ">
+                       <div class="item border ">
+                           <div class="item-img"><img src="Menuimg.jpg" alt="..."></div>
+                           <div class="item-content ">
+                               <div class="item-title">Realme</div>
+                                <div class="item text">
+                                    <button class="btn btn-success btn-pills  p-1 buy">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                    <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                    <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                                    <div class="item-footer  text-center py-3  ">
+                                        <button class="btn btn-outline-success mx-4"  id="">Buy</button>
+                                        <button class="btn btn-outline-secondary" id="">Hold</button>
+                                    </div>
+
+                                </div>
+                               
+                              
+                           </div>
+                       
+                       </div>
+                     
+                       
+                 </div>
+                 <div class="col  px-5  my-2">
+                    <div class="item border">
+                        <div class="item-img "><img src="Menuimg.jpg" alt="..."></div>
+                        <div class="item-content">
+                             <div class="item-title">Realme</div>
+                             <div class="item text">
+                                <button class="btn btn-success btn-pills  p-1 buy">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                    <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                    <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                                   <div class="item-footer  text-center py-3">
+                                        <button class="btn btn-outline-success mx-4"  id="">Buy</button>
+                                        <button class="btn btn-outline-secondary" id="">Hold</button>
+                                    </div>
+                             </div>
+                           
+                        </div>
+                       
+
+                    </div>
+
+                 </div>
+                 <div class="col  px-5  my-2 ">
+                    <div class="item border">
+                        <div class="item-img"><img src="Menuimg.jpg" alt="..."></div>
+                        <div class="item-content">
+                             <div class="item-title">Realme</div>
+                             <div class="item text"><button class="btn btn-success btn-pills  p-1 ">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                               <div class="item-footer text-center py-3">
+                                    <button class="btn btn-outline-success mx-4 buy"  id="">Buy</button>
+                                    <button class="btn btn-outline-secondary" id="">Hold</button>
+                                </div>
+
+                             </div>
+                            
+                        </div>
+                    </div>
+
+                 </div>
+                 <div class="col px-5 my-2">
+                    <div class="item border ">
+                        <div class="item-img"><img src="Menuimg.jpg" alt="..."></div>
+                        <div class="item-content">
+                             <div class="item-title">Realme</div>
+                             <div class="item text">
+                                <button class="btn btn-success btn-pills  p-1 ">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                    <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                    <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                                   <div class="item-footer  text-center py-3">
+                                        <button class="btn btn-outline-success mx-4 buy"  id="">Buy</button>
+                                        <button class="btn btn-outline-secondary" id="">Hold</button>
+                                    </div>
+                             </div>
+                             
+                        </div>
+                    </div>
+
+                 </div>
+                
+            </div>
+
+                
+        </div><!--Flat upto 70%-->
+
+                
+        </div><!--Home sales-->
+        <div class="Affective-sales my-2  ">
+            <h2 class="-mobiles-title p-3 ">Effective Price</h2>
+           <div class="row d-sm-flex flex-lg-row flex-warp  ">
+                 <div class="col  px-5 ">
+                       <div class="item border ">
+                           <div class="item-img">
+                              <img src="Menuimg.jpg" alt="...">
+                           </div>
+                           <div class="item-content ">
+                               <div class="item-title">Realme</div>
+                                <div class="item text">
+                                    <button class="btn btn-success btn-pills  p-1 ">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                    <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                    <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                                    <div class="item-footer  text-center py-3  ">
+                                        <button class="btn btn-outline-success mx-4 buy"  id="">Buy</button>
+                                        <button class="btn btn-outline-secondary" id="">Hold</button>
+                                    </div>
+
+                                </div>
+                               
+                              
+                           </div>
+                       
+                       </div>
+                     
+                       
+                 </div>
+                 <div class="col  px-5  my-2">
+                    <div class="item border">
+                        <div class="item-img "><img src="Menuimg.jpg" alt="..."></div>
+                        <div class="item-content">
+                             <div class="item-title">Realme</div>
+                             <div class="item text">
+                                <button class="btn btn-success btn-pills  p-1 ">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                    <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                    <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                                   <div class="item-footer  text-center py-3">
+                                        <button class="btn btn-outline-success mx-4 buy"  id="">Buy</button>
+                                        <button class="btn btn-outline-secondary" id="">Hold</button>
+                                    </div>
+                             </div>
+                           
+                        </div>
+                       
+
+                    </div>
+
+                 </div>
+                 <div class="col  px-5  my-2 ">
+                    <div class="item border">
+                        <div class="item-img"><img src="Menuimg.jpg" alt="..."></div>
+                        <div class="item-content">
+                             <div class="item-title">Realme</div>
+                             <div class="item text"><button class="btn btn-success btn-pills  p-1 ">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                               <div class="item-footer text-center py-3">
+                                    <button class="btn btn-outline-success mx-4 buy"  id="">Buy</button>
+                                    <button class="btn btn-outline-secondary" id="">Hold</button>
+                                </div>
+
+                             </div>
+                            
+                        </div>
+                    </div>
+
+                 </div>
+                 <div class="col px-5 my-2">
+                    <div class="item border ">
+                        <div class="item-img"><img src="Menuimg.jpg" alt="..."></div>
+                        <div class="item-content">
+                             <div class="item-title">Realme</div>
+                             <div class="item text">
+                                <button class="btn btn-success btn-pills  p-1 ">In stock</button> <button class="btn btn-info btn-pills  p-1 " id="Ataleoftwocity-n">Notify</button> <br>
+                                    <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                                    <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                                   <div class="item-footer  text-center py-3">
+                                        <button class="btn btn-outline-success mx-4 buy"  id="">Buy</button>
+                                        <button class="btn btn-outline-secondary" id="">Hold</button>
+                                    </div>
+                             </div>
+                             
+                        </div>
+                    </div>
+
+                 </div>
+                
+            </div>
+
+                
+        </div>
+
+
+    </div>
+
+
+
+    <footer class="container-fluid bg-dark " >
+        <div class="section row   justify-content-around align-items-center pt-5 ">
+             <div class="  section-1 d-flex justify-content-center col-12   col-xl-3">
+                 <div class="section-head  text-center" style="font-size: 35px;font-variant: small-caps;">
+                  
+                     <img src="https://png.pngtree.com/template/20191015/ourmid/pngtree-abstract-two-knife-icon-logo-image_317352.jpg" alt="image" width="230px" height="230px" style="background:white;border-radius:50%;">
+                     <div class="title  text-danger p-2">Pic Your Thing</div>
+                     <div class="section-content    text-light " style="font-size: 19px;">
+                        At YouTube, we’re committed to connecting you with health content from authoritative sources to help you stay informed and live your healthiest life. We’ve developed several features to give you more context on the health content you find on YouTube.
+                     </div>
+                </div>
+              
+             </div>
+             <div class=" col-3 col-md-3   col-xl-2 text-dark">
+                <div class="title pt-5 pb-2 text-danger " style="font-size: 40px;font-variant: small-caps;" >Products</div>
+                    <ul type="none" style="margin: 0;padding: 0;">
+                        <a href="#"> <li >Fashion</li></a>
+                        <a href="#"> <li>Trends</li></a>
+                        <a href="#"> <li>Mobiles</li></a>
+                        <a href="#"> <li>Electronics</li></a>
+                    </ul>
+
+             </div>
+             <div class="  col-3 col-md-3   col-xl-2 ">
+                <div class="title pt-5 pb-2 text-danger" style="font-size: 40px;font-variant: small-caps;" >Pages</div>
+                <ul type="none" style="margin: 0;padding: 0;">
+                    <a href="#"> <li >Home </li></a>
+                    <a href="#"> <li>Our Team </li></a>
+                    <a href="#"> <li>Footer</li></a>
+                    <a href="#"> <li>Electronics</li></a>
+                </ul>
+
+             </div>
+             <div class="  col-3 col-md-3  col-xl-2 ">
+                <div class="title pt-5 pb-2 text-danger" style="font-size: 40px;font-variant: small-caps;" >Follow Us</div>
+                <ul type="none" style="margin: 0;padding: 0;" >
+                    <a href="#"> <li >Fashion</li></a>
+                    <a href="#"> <li>Trends</li></a>
+                    <a href="#"> <li>Mobiles</li></a>
+                    <a href="#"> <li>Electronics</li></a>
+                </ul>
+
+             </div>
+
+
+             <div class="col-9 d-flex text-light d-flex justify-content-around my-5"> 
+                  
+                <a href="#"><i class="fa fa-google fa-stack-3x"></i></a>
+                <a href="#"><i class="fa fa-facebook fa-stack-3x"></i></a>
+                <a href="#"><i class="fa fa-twitter fa-stack-3x"></i></a>
+                <a href="#"><i class="fa fa-instagram fa-stack-3x"></i></a>
+             </div>
+
+             <div class="col-12 copy text-center p-5 h2 m-0 "  style="height: 100px;font-variant: small-caps;" >
+                <p style="color: white;"> © 2023 Copyright: Pic Your Things</p>
+             </div>
+            
+           
+        </div>
+   
+
+    </footer>
+
+</body>
+<script src="Electronics.js"></script>
+<script src="Header.js"></script>
+<script src="Cart_page.js"></script>
+</html>

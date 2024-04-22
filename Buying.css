@@ -1,0 +1,44 @@
+
+/* html{
+    display: table;
+
+}
+body{
+    display: table-cell;
+    vertical-align: middle;
+} */
+
+.Buying_product{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.product-img {
+    width: 520px;
+    height: 350px;
+  
+}
+.product-img img{
+   width: 100%;
+    margin: 0px 95px;
+}
+.img-title{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.product-content{
+    margin: 0 95px;
+    font-size: 25px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pro-id{
+    margin: 10px 0px;;
+}
+
+.card-footer .btn{
+  font-size: 20px;
+}

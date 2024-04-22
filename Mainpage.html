@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="Header.css">
+    <link rel="stylesheet" href="Footer.css">
+   
+    <link rel="stylesheet" href="Mainpage.css">
+
+    
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+  
+    <link rel="stylesheet" href="Singin_form.css">
+
+   
+    <title>Grab your book</title>
+
+</head>
+<style>
+   .sin-sup{
+    position: absolute;
+    left: 0;
+    top: 0;
+   }
+   .page-title{
+    
+  
+     position: relative;
+     font-size: 4vw;
+     color:rgb(37, 37, 206);
+     
+     -webkit-text-stroke:0.1vw rgb(6, 9, 32);
+     text-transform: uppercase;
+   }
+   .page-title::before{
+   content: attr(data-text); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: white;
+    border-right: 2px solid white; 
+   /* -webkit-text-stroke:0.1vw rgb(6, 9, 32); */
+    animation: headani 6s linear   infinite;
+    overflow: hidden;
+   }
+   @keyframes headani {
+
+    0%,100%{
+        width: 0%;
+    }
+    70%,90%{
+        width: 110%;
+    }
+    
+   }
+   .notification-icon a{
+     text-decoration: none;
+   }
+   .sin-sup{
+     z-index: 101;
+   }
+</style>
+
+<body >
+     <!--singin / signup forms-->
+     <div class="sign  w-100  d-none">
+       
+        <div class="sin-sup  w-100 d-flex justify-content-center align-items-center ">
+            <div class="login-form d-flex justify-content-center w-100  " >
+                <div class="row ">
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <h2 class="card-title">Login</h2>
+                        <button onclick="close_sign_page()" style="width: 25px; background-color: white;color:black;font-size:22px;position: absolute;top: 10px;;right: 30px;"><i class="fa fa-solid fa-circle-xmark "></i></button>
+                        <form>
+                          <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                          </div>
+                          <div class="validation-button d-flex justify-content-around gap-3">
+                             <button type="submit" class="btn btn-primary w-50">Sign In</button>
+                             <button type="submit" class="btn btn-primary w-50">Forget</button>
+                         </div>
+                        </form>
+                        <label class="w-100 text-center my-3">or</label>
+                        <label class="w-100 text-center mb-2 icon d-flex gap-3 justify-content-center"><i class="fa fa-google fa-stack-3x"></i><i class="fa fa-facebook fa-stack-3x"></i><i class="fa fa-twitter fa-stack-3x"></i></label>
+                        <p >Don't have an account? <button class="btn  signupbtn" onclick="singin()">Sign up</button></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+           
+                    
+          </div>
+          <div class="signup w-100  d-none" >
+              
+            <div class="row justify-content-center">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h2 class="card-title">Sign Up</h2>
+                    <button onclick="close_sign_page()" style="width: 25px; background-color: white;color:black;font-size:22px;position: absolute;top: 10px;;right: 30px;"><i class="fa fa-solid fa-circle-xmark "></i></button>
+                      
+                    <form >
+                      <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                      </div>
+                      <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                    </form>
+                    <label class="w-100 text-center my-3">or</label>
+                    <label class="w-100 text-center mb-2 icon d-flex gap-3 justify-content-center"><i class="fa fa-google fa-stack-3x"></i><i class="fa fa-facebook fa-stack-3x"></i><i class="fa fa-twitter fa-stack-3x"></i></label>
+                    <p >Don't have an account? <a href="#"><button class="btn   signinbtn" onclick="singup()">Sign in</button></a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>    
+    </div>
+  
+     <!--sing in /sinup forms-->
+       <div class="container-fluid  p-0" >
+        <div class="page-head container-fluid d-flex  bg-dark align-items-center gap-5">
+            <div data-text="Pic Ur Things..." class="page-title  mx-auto">Pic Ur Things...</div>
+            <div class="notification-icon">
+                <span class="d-none d-lg-block">
+
+                </span>
+                 <a href="Cart_Page.html"><i class="fa fa-solid fa-bell text-light d-none d-lg-block"></i></a>
+              </div>
+              <div class="no-of-days text-light d-none d-lg-block">
+                <i class="fa fa-solid fa-fire ""></i>
+                <span>0</span>
+
+              </div>
+
+              <div class="user d-flex flex-column  justify-content-center mx-5 w-40">
+                <div class="user-profile text-light " onmouseenter="over()" onmouseleave="leave()">
+
+                    <span>
+                       
+                    </span>  
+                </div>
+               
+                <div class="profile-btn text-light  d-flex align-items-center gap-3">
+                  <span>
+                    <button class="btn btn-outline-light" onclick="sign_page()">singin</button>
+                  </span>
+                  <button class="btn btn-outline-light .premium " onclick="open_pre()">
+                    <a href="premium_paymentmode.html"> <i class="fa fa-solid fa-star px-2"></i></a>
+                  </button>
+             
+                </div>
+           </div>
+            <div class="user-details text-start p-5  text-primary bg-light shadow">
+                <div class="user-title text-center">User info</div>
+                <div class="user-name py-5">User  :<input class="form-control" type="text" value="Ganesh"  readonly></div>
+                <div class="user-id">ID : <input class="form-control" type="text" value="...-.......-"  readonly> </div>
+                <div class="text-center my-3"><button class="btn btn-info log-out ">Logout</button></div>
+           </div>
+       </div>
+     
+       
+         <div class="nav-menu   " >
+           <nav class="navbar  navbar-expand-lg  text-nowrap py-2">
+            <div class=" container-fluid">
+                
+               
+             <div class="collapse navbar-collapse" id="bar">
+                <ul class="navbar-nav mx-lg-5" >
+                        <li class="nav-item"><a href="#" class="nav-link ">Home</a></li>
+                       
+                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="Electronics.html" class="nav-link">Electronics</a></li>
+                        <li class="nav-item"><a href="#contactus" class="nav-link ">Contact us</a></li>
+                </ul>
+             </div>
+             <div class="input-group m-3 float-md-end " style="width: auto;" >
+                <input type="search" class="form-control" placeholder="search">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-light w-100">Search</button>
+                </div>
+            </div>
+
+            <button class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#bar" >
+                <span class="navbar-toggler-icon ">
+                    <i class="fa fas fa-bars" style="color:#fff; font-size:28px;"></i>
+                </span>
+            </button> 
+            
+            </div>
+            
+          </nav>
+          
+          </div><!--navigation bar-->
+
+
+
+
+
+    <div class="container-fluid  Awesome-brands-carousel">
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+           
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2000">
+
+                <div class="item d-flex justify-content-center gap-5 align-items-center shadow m-3">
+                    <div class="content d-none d-lg-block py-5">
+                        <p><strong>Contrary to popular belief, Lorem Ipsum is not 
+                            simply random text. It has roots in a piece of classical Latin 
+                            literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                            a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lore</strong></p>
+                    </div>
+            
+                    <div class="line d-none d-lg-block "></div>
+                    
+                    <div class="img_cou  ">
+                        <img class="cour_1"  src="https://ik.imagekit.io/bfrs/tr:w-600,h-800,pr-true,cm-pad_resize,bg-FFFFFF/image_thewatchshop/data/241474.jpg">
+                       
+                    </div> 
+                   
+                   </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                
+                   <div class="item d-flex justify-content-center gap-5 align-items-center shadow m-3">
+                     <div class="content d-none d-lg-block py-5">
+                  <p><strong>Contrary to popular belief, Lorem Ipsum is not 
+                      simply random text. It has roots in a piece of classical Latin 
+                       literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                         a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lore</strong></p>
+                      </div>
+
+                    <div class="line d-none d-lg-block "></div>
+    
+                     <div class="img_cou  ">
+                         <img class="cour_1" src="https://images.samsung.com/is/image/samsung/p6pim/in/qa85qn900ckxxl/gallery/in-qled-qn900c-qa85qn900ckxxl-535909939?$730_584_PNG$">
+                         
+                        </div> 
+                </div>
+
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <div class="item d-flex justify-content-center gap-5 align-items-center shadow m-3">
+                    <div class="img_cou  ">
+                        <img class="cour_1" src="https://m.media-amazon.com/images/I/21gR+fosW0L._SY300_SX300_.jpg">
+                     </div>  
+                    <div class="line d-none d-lg-block "></div>
+                     <div class="content d-none d-lg-block py-5">
+                                 <p><strong>Contrary to popular belief, Lorem Ipsum is not 
+                              simply random text. nia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lore</strong></p>
+                    <div class="cap text-end text-info"  style="font-size: 25px;">Never Loose...</div>
+                   </div>
+ 
+                    <div class="line d-none d-lg-block "></div>
+     
+                    <div class="img_cou  ">
+                          <img class="cour_1" src="https://m.media-amazon.com/images/I/71xb2xkN5qL._AC_UY218_.jpg">
+                    </div>    
+                  </div>
+                
+              </div>
+              <div class="carousel-item " data-bs-interval="2000">
+                <div class="item d-flex justify-content-center gap-5 align-items-center shadow m-3 bg-dark text-light">
+                    <div class="img_cou  ">
+                        <img class="cour_1" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_blue_a80b6882-1247-439d-a17b-1c87ed4fa7c8_600x.png?v=1641206192">
+                     </div>  
+                 
+ 
+                    <div class="line d-none d-lg-block "></div>
+     
+                    <div class="img_cou  ">
+                        <img class="cour_1" src="https://media.fashionnetwork.com/cdn-cgi/image/fit=contain,width=1000,height=1000/m/21f2/c5e0/d481/6d4c/291e/9b6d/137e/4e8e/f7a4/bf2e/bf2e.png">
+                     </div>  
+                 
+ 
+                    <div class="line d-none d-lg-block "></div>
+     
+                    <div class="img_cou  ">
+                          <img class="cour_1" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/93b827fc-0108-4e8b-9ea9-e66fb1e7a362_1524x.png?v=1625157890">
+                    </div>    
+                  </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <div class="item d-flex justify-content-center gap-5 align-items-center shadow m-3  ">
+                    <div class="img_cou  p-3">
+                        <img class="cour_1" src="https://m.media-amazon.com/images/I/51k0NvUmYLL._AC_UY218_.jpg">
+                     </div>  
+                 
+ 
+                    <div class="line d-none d-lg-block "></div>
+     
+                    <div class="content d-none d-lg-block py-5 text-center text-success" style="font-size: 35px;font-family: 'Courier New', Courier, monospace;">
+                            
+                        <div class="con" style="padding-top: 100px;">Most Exiting Prices <br>Rs 34***</div>
+                    </div>
+                 
+ 
+                    <div class="line d-none d-lg-block "></div>
+     
+                    <div class="img_cou  p-3">
+                          <img class="cour_1" src="https://m.media-amazon.com/images/I/31UISB90sYL._AC_UY218_.jpg">
+                    </div>    
+                  </div>
+                          </div>
+                          
+            </div>
+            <a class="carousel-control-prev"  data-bs-target="#carouselExample" data-bs-slide="prev">
+            
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next"  data-bs-target="#carouselExample" data-bs-slide="next">
+              
+              <span class="carousel-control-next-icon" ></span>
+            </a>
+          </div>
+                                  
+      </div>   
+
+
+
+
+      
+
+    
+
+
+    <div class="new-arrival ">
+        <h2 class="new-arrival-title"><i class="fa fa-solid fa-circle" style="color: red;"></i><i class="fa fa-solid fa-circle" style="color: yellow;"></i><i class="fa fa-solid fa-circle" style="color: green;"></i>New arrival</h2>
+          <div class="new-arrival-items">
+          <div class="new-arrival-row row justify-content-evenly   ">
+              <div class="new-arrival-item1 col-6 col-sm-5 col-lg-3" >
+               
+                 <div class="card border-0 shadow text-center">
+                      <div class="card-img-top"><img width="90%" height="100%" src="https://img.freepik.com/free-vector/abstract-elegant-winter-book-cover_23-2148798745.jpg?w=2000"></div>
+                      <div class="card-body">
+                            <div class="card-title">
+                                <span style="color:blue;font-size: 20px;"> Minimium discount upto 70% 0ff </span><br>
+
+                                <button class="m-1 btn btn-outline-success " style="font-size: 19px;"  id="New-arrival-1">Comming soon</button>
+                            </div>
+                            
+                           
+                      </div>
+                 </div>
+                 
+              </div>
+              <div class="new-arrival-item2  col-6 col-sm-5 col-lg-3">
+                 <div class="card border-0 shadow text-center">
+                       <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/9/f/p/-original-imaghxenhnpyhn5u.jpeg?q=70"></div>
+                       <div class="card-body">
+                          <div class="card-title">
+                              <span style="color:blue; font-size: 20px;"> Minimium discount upto 60% 0ff </span>
+                              <br>
+             
+                              <button class="m-1 btn btn-outline-success " style="font-size: 19px;"  id="New-arrival-2">Comming soon</button>
+
+                          </div>
+                         
+                       </div>
+                  </div>
+               
+                       
+                 </div>
+
+              <div class="new-arrival-item3  col-6 col-sm-5 col-lg-3">
+             <div class="card border-0 shadow text-center">
+                    <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/612/612/xif0q/smartwatch/6/q/g/-original-imaggtjvexwdrfep.jpeg?q=70"></div>
+                    <div class="card-body">
+                          <div class="card-title">
+                              <span style="color:blue; font-size: 20px;"> Minimium discount upto 80% 0ff </span><br>
+       
+                              <button class="m-1 btn btn-outline-success " style="font-size: 19px;"  id="New-arrival-3">Comming soon</button>
+                          </div>
+                         
+                    </div>
+                  </div>
+               
+              </div>
+              <div class="new-arrival-item4  col-6 col-sm-5 col-lg-3">
+                <div class="card border-0 shadow text-center">
+                    <div class="card-img-top"><img width="90%" height="100%" src=" https://rukminim1.flixcart.com/image/312/312/xif0q/television/2/3/k/-original-imagkcdaszup3fac.jpeg?q=70"></div>
+                    <div class="card-body">
+                          <div class="card-title">
+                              <span style="color:blue; font-size: 20px;"> Minimium discount upto 75% 0ff </span><br>
+                           
+                              <button class="m-1 btn btn-outline-success " style="font-size: 19px;"  id="New-arrival-4">Comming soon</button>
+                          </div>
+                         
+                    </div>
+                 </div>
+               
+              </div>
+                <div class="new-arrival-item5 col-sm-5 col-lg-3 d-none d-lg-block">
+                    <div class="card border-0 shadow text-center">
+                        <div class="card-img-top"><img width="90%" height="100%" src="https://images-eu.ssl-images-amazon.com/images/I/81AXikr4MvL._AC_UL600_SR600,600_.jpg"></div>
+                        <div class="card-body">
+                              <div class="card-title">
+                                  <span style="color:blue; font-size: 20px;"> Minimium discount upto 70% 0ff </span><br>
+
+                                  <button class="m-1 btn btn-outline-success " style="font-size: 19px;"  id="New-arrival-5">Comming soon</button>
+                              </div>
+                             
+                        </div>
+                     </div>
+                   
+                </div>
+                <div class="new-arrival-item5 col-sm-5 col-lg-3 d-none d-lg-block">
+                    <div class="card border-0 shadow text-center">
+                        <div class="card-img-top"><img width="90%" height="100%" src="https://arzooo-static-prod.s3.ap-south-1.amazonaws.com/images/products/b004f/1544b/b004f1544bfa314368116bbd6bd93f6cfb30e636279b2b09fc2350ce8968deb5_01.jpg"></div>
+                        <div class="card-body">
+                              <div class="card-title">
+                                  <span style="color:blue; font-size: 20px;"> Minimium discount upto 70% 0ff </span><br>
+
+                                  <button class="m-1 btn btn-outline-success " style="font-size: 19px;"  id="New-arrival-6">Comming soon</button>
+                              </div>
+                             
+                        </div>
+                     </div>
+                   
+                </div>
+                <div class="new-arrival-item5 col-sm-5 col-lg-3 d-none d-lg-block">
+                    <div class="card border-0 shadow text-center">
+                        <div class="card-img-top"><img width="100%" height="100%" src="https://rukminim1.flixcart.com/image/612/612/l4rd0280/shoe/b/d/u/-original-imagfh9gt38826vz.jpeg?q=70"></div>
+                        <div class="card-body">
+                              <div class="card-title">
+                                  <span style="color:blue; font-size: 20px;"> Minimium discount upto 70% 0ff </span><br>
+
+                                  <button class="m-1 btn btn-outline-success " style="font-size: 19px;"  id="New-arrival-7">Comming soon</button>
+                              </div>
+                             
+                        </div>
+                     </div>
+                   
+                </div>
+                <div class="new-arrival-item5 col-sm-5 col-lg-3 d-none d-lg-block">
+                    <div class="card border-0 shadow text-center">
+                        <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/2/p/8/-original-imagg2a4rmk94gay.jpeg?q=70"></div>
+                        <div class="card-body">
+                              <div class="card-title">
+                                  <span style="color:blue; font-size: 20px;"> Minimium discount upto 70% 0ff </span><br>
+                                  <button class="m-1 btn btn-outline-success " style="font-size: 19px;"  id="New-arrival-8">Comming soon</button>
+                              </div>
+                             
+                        </div>
+                     </div>
+                   
+                </div>
+            </div>
+         </div>
+        
+   </div><!--new arrival-->
+
+
+
+   <div class="container-fluid   slides1 my-5 mb-0 Awesome-brands bg-light py-5">
+       <h2 class="  mx-0 " style="font-size:50px;">Awesome  Brands</h2>
+        <div class="Awesome-brand">
+         
+        <div class="row d-flex  justify-content-center">
+            <div class="col-6 col-xxl-3">
+             <div class="card p-2">
+                <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/smartwatch/s/8/1/-original-imaghxg8ghehmvzh.jpeg?q=70" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">Iphone Three</h5>
+                  <p class="card-text"></p>
+                  <p class="card-text">Price: $99.99</p>
+                  <div class="card-fotter d-flex ">
+                    <a href="#" class="btn btn-primary w-50 mx-2"><i class="fas fa-shopping-cart"></i> Buy</a>
+                    <a href="#" class="btn btn-secondary w-50"><i class="far fa-heart"></i> HOLD</a>
+                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-xxl-3">
+                <div class="card p-2" >
+                   <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/smartwatch/s/8/1/-original-imaghxg8ghehmvzh.jpeg?q=70" class="card-img-top" alt="Product Image">
+                   <div class="card-body">
+                     <h5 class="card-title">Iphone Three</h5>
+                     <p class="card-text"></p>
+                     <p class="card-text">Price: $99.99</p>
+                     <div class="card-fotter d-flex ">
+                     <a href="#" class="btn btn-primary w-50 mx-2"><i class="fas fa-shopping-cart"></i> Buy</a>
+                     <a href="#" class="btn btn-secondary w-50"><i class="far fa-heart"></i> HOLD</a>
+                    </div>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-6 col-xxl-3">
+                <div class="card p-2" >
+                   <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/smartwatch/s/8/1/-original-imaghxg8ghehmvzh.jpeg?q=70" class="card-img-top" alt="Product Image">
+                   <div class="card-body">
+                     <h5 class="card-title">Iphone Three</h5>
+                     <p class="card-text"></p>
+                     <p class="card-text">Price: $99.99</p>
+                     <div class="card-fotter d-flex ">
+                        <a href="#" class="btn btn-primary w-50 mx-2"><i class="fas fa-shopping-cart"></i> Buy</a>
+                        <a href="#" class="btn btn-secondary w-50"><i class="far fa-heart"></i> HOLD</a>
+                       </div>
+                    </div>
+                 </div>
+               </div>
+               <div class="col-6 col-xxl-3">
+                <div class="card p-2" >
+                   <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/smartwatch/s/8/1/-original-imaghxg8ghehmvzh.jpeg?q=70" class="card-img-top" alt="Product Image">
+                   <div class="card-body">
+                     <h5 class="card-title">Iphone Three</h5>
+                     <p class="card-text"></p>
+                     <p class="card-text">Price: $99.99</p>
+                     <div class="card-fotter d-flex ">
+                        <a href="#" class="btn btn-primary w-50 mx-2"><i class="fas fa-shopping-cart"></i> Buy</a>
+                        <a href="#" class="btn btn-secondary w-50"><i class="far fa-heart"></i> HOLD</a>
+                       </div>
+                   </div>
+                 </div>
+               </div>
+               
+        </div>
+        
+
+
+    </div><!--Awesome brands-->
+
+   </div><!--Fantastic Books end-->
+
+
+
+
+   <div class="container-fluid Top-Books-main text-center">
+    <div class=" row section  text-center mt-5 justify-content-around">
+      <div class="section-heading Top-Books-head col-12 text-center"><h1 class="display-7 text-dark  Top-Books mb-4" >Top Fiction Books</h1></div>
+        <div class="col-md-5 col-lg-3 mb-3 col-sm-9 ">
+             <div class="card Top-Book-img1 border-0 shadow ">
+                   <div class="card-img-top">
+                      <div class="card-link"><a href="#">  <img src="https://m.media-amazon.com/images/I/51ml2vt0AFL.jpg" alt="A tale of two cities"></a></div>
+                   </div>
+                  
+                   <div class="card-body">
+                       <div class="card-title text-start text-danger ">A Tale of Two Cities</div>
+                   
+                       <div class="card-text text-start  ">
+                           <span><i class="text-secondary">Author : </i>Charles Dicken</span><br>
+                           <span><i class="text-secondary">Seller : </i>Pick ur Book</span><br>
+                           <button class="btn btn-success btn-pills  p-0 ">In stock</button> <button class="btn btn-info btn-pills  p-0 " id="Ataleoftwocity-n">Notify</button> <br>
+                           <span><strong style="text-decoration: line-through;color: red;">INR 499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                           <br><span>Rating : 4.5  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                           <span><i class="text-secondary">Category : </i> Bestseller Books, Teen Fiction, Fiction </span><br>
+                           
+                       </div>
+                       <a href="#" class="card-link readmore ">readmore</a>
+                       
+                       <div class="text-center bg-light">
+                           <button class="btn btn-outline-success"  id="Ataleoftwocity-b">Buy</button>
+                           <button class="btn btn-outline-secondary" id="Ataleoftwocity-h">Hold</button>
+                       </div>
+                   </div>
+             </div>
+            
+        </div>
+        <div class="col-md-5 col-lg-3 mb-3 col-sm-9  ">
+           <div class="card Top-Book-img2 border-0 shadow ">
+               <div class="card-img-top">
+                  <div class="card-link"><a href="#">  <img src="https://m.media-amazon.com/images/I/51rxEvLljUL._SX322_BO1,204,203,200_.jpg" alt="Lifeofpi"></a></div>
+        
+               </div>
+              
+               <div class="card-body">
+                   <div class="card-title text-start text-danger ">Life Of Pie</div>
+               
+                   <div class="card-text text-start  ">
+                       <span><i class="text-secondary">Author : </i>Yann Martel</span><br>
+                       <span><i class="text-secondary">Seller : </i>Pick ur Book</span><br>
+                       <button class="btn btn-success btn-pills  p-0 ">In stock</button><button class="btn btn-info btn-pills  p-0 " id="Lifeofpi-n">Notify</button> <br>
+                       <span><strong style="text-decoration: line-through;color: red;">INR 398.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 199.0</span><span style="color:red;"> 50% 0ff </span></span>
+                       <br><span>Rating : 4 <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> </i></span><br>
+                       <span><i class="text-secondary">Category : </i> A modern classic  bestseller</span><br>
+                       
+                   </div>
+                   <a href="#" class="card-link readmore ">readmore</a>
+                   
+                   <div class="text-center bg-light">
+                       <button class="btn btn-outline-success"  id="Lifeofpi-b">Buy</button>
+                       <button class="btn btn-outline-secondary" id="Lifeofpi-h">Hold</button>
+                   </div>
+               </div>
+         </div>
+       </div>
+    <div class=" col-md-12 col-lg-3 shadow d-lg-flex flex-column mb-5 d-none d-md-block  " style="border-radius: 7px;">
+           <div class="row Top-Book-img3 py-sm-3  py-lg-0">
+                 <div class="col-md-5 col-lg-12">
+                   <div class="card-img-left ">
+                       <div class="card-link"><a href="#">  <img width="50px" src="https://m.media-amazon.com/images/I/41rc1NK5nIL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg" alt="Thehelp"></a></div>
+                    </div>
+                 </div>
+                 <div class="col-md-7 col-lg-12 ">
+                   <div class="card-body py-sm-2.5 ">
+                       <div class="card-title text-start text-danger py-3">The Help (Novel)</div>
+                   
+                       <div class="card-text text-start  ">
+                           <span><i class="text-secondary">Author : </i>Kathryn Stockett</span><br>
+                           <span><i class="text-secondary">Seller : </i>Pick ur Book</span><br>
+                           <button class="btn btn-success btn-pills  p-0 ">In stock</button>  <button class="btn btn-info btn-pills  p-0 " id="Thehelp-n">Notify</button><br>
+                           <span><strong style="text-decoration: line-through;color: red;">INR 999.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 299.0</span><span style="color:red;"> 70% 0ff </span></span>
+                           <br><span>Rating : 4.7  <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star"></i> <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i></span><br>
+                           <span><i class="text-secondary">Category : </i> The #1 New York Times bestselling nove</span><br>
+                           
+                       </div>
+                       <a href="#" class="card-link readmore ">readmore</a>
+                       
+                       <div class="text-center bg-light  ">
+                           
+                           <button class="btn btn-outline-success "  id="Thehelp-b">Buy</button>
+                           <button class="btn btn-outline-secondary " id="Thehelp-h">Hold</button>
+                       </div>
+                   </div>
+                 </div>
+           </div>
+           
+        </div>
+   </div>
+
+</div><!--Top container-->
+
+
+  <div class="container-fluid Top-picks bg-dark mt-5">
+     <h1 class="Top-picks-heading pt-5 pb-sm-3 text-light" style="font-size: 50px;">Top Picks on Laptops</h1>
+    <div class="row  pb-5  d-sm-flex  gap-sm-1 gap-md-3 justify-content-evenly align-items-center">
+     
+            <div class="col-6 col-sm-2 d-none d-xxl-block   Top-picks-item1">
+                <div class="card border-0 shadow text-center">
+                    <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/xif0q/computer/b/x/o/15-eg2091t-thin-and-light-laptop-hp-original-imagmf9fvrzr8y4d.jpeg?q=70"></div>
+                    <div class="card-body">
+                        <div class="card-title " >
+                            <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-warning w-50 mx-2">BUY</div><div class="btn btn-warning w-50">HOLD</div> </span>
+                        </div>
+                         
+                    </div>
+                 </div>
+               
+            </div>
+            <div class="col-6 col-sm-5  col-xxl-2   Top-picks-item2">
+                <div class="card border-0 shadow text-center">
+                    <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/xif0q/computer/l/9/e/inspiron-7425-2-in-1-laptop-dell-original-imagjh6nsjhnrtgb.jpeg?q=70"></div>
+                    <div class="card-body">
+                        <div class="card-title " >
+                            <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-warning w-50 mx-2">BUY</div><div class="btn btn-warning w-50">HOLD</div> </span>
+                        </div>
+                         
+                    </div>
+                 </div>
+               
+            </div>
+            <div class=" col-6 col-sm-5  col-xxl-3  Top-picks-item3">
+                <div class="card border-0 shadow text-center">
+                    <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/kuyf8nk0/computer/3/n/s/mk183hn-a-laptop-apple-original-imag7yzkbgbwvwq3.jpeg?q=70"></div>
+                    <div class="card-body">
+                        <div class="card-title " >
+                            <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-warning w-50 mx-2">BUY</div><div class="btn btn-warning w-50">HOLD</div> </span>
+                        </div>
+                         
+                    </div>
+                 </div>
+               
+            </div>
+            <div class="col-6 col-sm-5  col-xxl-2  Top-picks-item4">
+                <div class="card border-0 shadow text-center">
+                    <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/xif0q/computer/j/y/l/-original-imagnpcezv5dfdew.jpeg?q=70"></div>
+                    <div class="card-body">
+                        <div class="card-title " >
+                            <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-warning w-50 mx-2">BUY</div><div class="btn btn-warning w-50">HOLD</div> </span>
+                        </div>
+                    </div>
+                 </div>
+               
+            </div>
+            <div class=" col-6 col-sm-5  col-xxl-2  Top-picks-item5">
+                <div class="card border-0 shadow text-center">
+                    <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/416/416/xif0q/computer/9/5/o/-original-imagp8xzapemzquv.jpeg?q=70"></div>
+                    <div class="card-body">
+                        <div class="card-title " >
+                            <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-warning w-50 mx-2">BUY</div><div class="btn btn-warning w-50">HOLD</div> </span>
+                        </div>
+                         
+                    </div>
+                 </div>
+               
+            </div>
+         
+    </div>
+   </div><!--Toppicks end-->
+
+   
+   <div class="container-fluid Trend-setter bg-info mt-2 ">
+    <h1 class="Trend-setter-heading pt-5 pb-sm-3 text-dark" style="font-size: 50px;">Trend Setter</h1>
+   <div class="row  pb-5  d-sm-flex  gap -0 gap-sm-2 gap-md-3   justify-content-evenly align-items-center">
+    
+           <div class="col-6 col-sm-2 d-none d-xxl-block   Trend-setter-item1">
+               <div class="card border-0 shadow text-center">
+                   <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/832/832/xif0q/watch/q/d/m/-original-imagphkzrqzdqvc2.jpeg?q=70"></div>
+                   <div class="card-body">
+                    <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                    </div>
+                        
+                   </div>
+                </div>
+              
+           </div>
+           <div class="col-6 col-sm-5  col-xxl-2  Trend-setter-item2">
+               <div class="card border-0 shadow text-center">
+                   <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/832/832/xif0q/watch/c/x/v/1-as000047b-allen-solly-women-original-imagq69jnncy3w3h.jpeg?q=70"></div>
+                   <div class="card-body">
+                    <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                    </div>
+                        
+                   </div>
+                </div>
+              
+           </div>
+           <div class="col-6 col-sm-5  col-xxl-3 Trend-setter-item3">
+               <div class="card border-0 shadow text-center">
+                   <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/612/612/xif0q/watch/h/r/1/-original-imaghm7zudjbzf7y.jpeg?q=70"></div>
+                   <div class="card-body">
+                    <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                    </div>
+                        
+                   </div>
+                </div>
+              
+           </div>
+           <div class="col-6  col-sm-5 col-xxl-2 Trend-setter-item4">
+               <div class="card border-0 shadow text-center">
+                   <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/612/612/xif0q/watch/k/5/8/-original-imagz4wvcgz7yrny.jpeg?q=70"></div>
+                   <div class="card-body">
+                    <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                    </div>
+                        
+                   </div>
+                </div>
+              
+           </div>
+           <div class="col-6 col-sm-5  col-xxl-2 Trend-setter-item5">
+               <div class="card border-0 shadow text-center">
+                   <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/612/612/xif0q/watch/h/p/p/-original-imagqcq2ts6kh62y.jpeg?q=70"></div>
+                   <div class="card-body">
+                    <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                    </div>
+                        
+                   </div>
+                </div>
+              
+           </div>
+        
+   </div>
+  </div><!--Trend setter-->
+
+
+
+
+
+  <div class="container-fluid Special-products bg-warning mt-2 ">
+    <h1 class="Special-products-heading pt-5 pb-sm-3 text-danger" style="font-size: 50px;">Special products</h1>
+   <div class="row  pb-5  d-sm-flex gap -0 gap-sm-2 gap-md-3  justify-content-evenly align-items-center">
+    
+           <div class="col-sm-2 d-none d-xxl-block   special-item1">
+               <div class="card border-0 shadow text-center">
+                   <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/xif0q/television/s/5/t/qa65qn90caklxl-samsung-original-imagzvu3baef9ejt.jpeg?q=70"></div>
+                   <div class="card-body">
+                    <div class="card-title " >
+                       
+                        <span style="color:red; " class="d-flex"> <div class="btn btn-danger w-50 mx-2">BUY</div><div class="btn btn-danger w-50">HOLD</div> </span>
+                    </div>  
+                        
+                   </div>
+                </div>
+              
+           </div>
+           <div class="col-6   col-sm-5  col-xxl-2  special-item2">
+               <div class="card border-0 shadow text-center">
+                   <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/xif0q/television/h/0/x/-original-imaghgphu8kjtgvs.jpeg?q=70"></div>
+                   <div class="card-body">
+                    <div class="card-title " >
+                       
+                        <span style="color:red; " class="d-flex"> <div class="btn btn-danger w-50 mx-2">BUY</div><div class="btn btn-danger w-50">HOLD</div> </span>
+                    </div>
+                        
+                   </div>
+                </div>
+              
+           </div>
+           <div class="col-6  col-sm-5 col-xxl-3 special-item3">
+               <div class="card border-0 shadow text-center">
+                   <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/jx502vk0/television/z/w/s/samsung-qa65q60rakxxl-65q60rak-original-imafhnvgdxhghyyd.jpeg?q=70"></div>
+                   <div class="card-body">
+                    <div class="card-title " >
+                       
+                        <span style="color:red; " class="d-flex"> <div class="btn btn-danger w-50 mx-2">BUY</div><div class="btn btn-danger w-50">HOLD</div> </span>
+                    </div>
+                        
+                   </div>
+                </div>
+              
+           </div>
+           <div class="col-6 col-sm-5 col-xxl-2 special-item4">
+               <div class="card border-0 shadow text-center">
+                   <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/kuwzssw0/television/b/1/v/u-series-55-u1s-55uc1a00-oneplus-original-imag7xtnzgaaxqrg.jpeg?q=70"></div>
+                   <div class="card-body">
+                    <div class="card-title " >
+                       
+                        <span style="color:red; " class="d-flex"> <div class="btn btn-danger w-50 mx-2">BUY</div><div class="btn btn-danger w-50">HOLD</div> </span>
+                    </div>
+                        
+                   </div>
+                </div>
+              
+           </div>
+           <div class=" col-6 col-sm-5  col-xxl-2 special-item5">
+               <div class="card border-0 shadow text-center">
+                   <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/l41n2q80/television/i/9/h/-original-imagffg3exvzeute.jpeg?q=70"></div>
+                   <div class="card-body">
+                    <div class="card-title " >
+                       
+                        <span style="color:red; " class="d-flex"> <div class="btn btn-danger w-50 mx-2">BUY</div><div class="btn btn-danger w-50">HOLD</div> </span>
+                    </div>
+                        
+                   </div>
+                </div>
+              
+           </div>
+        
+   </div>
+  </div><!--special products-->
+
+
+
+  <div class="container-fluid Top-brands bg-secondary  mt-2 ">
+    <h1 class="Top-brands-heading pt-5 pb-sm-3 text-light" style="font-size: 50px;">Top Brands</h1>
+   <div class="row  pb-5  d-sm-flex   justify-content-evenly align-items-center">
+    
+           <div class="col-sm-2 d-none d-xxl-block   Top-brands-item1">
+               <div class="card border-0 shadow text-center">
+                   <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/m/l/o/-original-imagmg6gzjf7gggt.jpeg?q=70"></div>
+                   <div class="card-body">
+                    <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                    </div>
+                        
+                   </div>
+                </div>
+              
+           </div>
+           <div class="col-12   col-sm-5  col-xxl-2  Top-brands-item2">
+               <div class="card border-0 shadow text-center">
+                   <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/2/z/4/-original-imagqxx2haehpjnf.jpeg?q=70"></div>
+                   <div class="card-body">
+                    <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                    </div>
+                        
+                   </div>
+                </div>
+              
+           </div>
+           <div class="col-12  col-sm-5 col-xxl-3 Top-brands-item3">
+               <div class="card border-0 shadow text-center">
+                   <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/6/x/j/-original-imaghxejqvpwfqh2.jpeg?q=70"></div>
+                   <div class="card-body">
+                    <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                    </div>
+                        
+                   </div>
+                </div>
+              
+           </div>
+           <div class="col-12 col-sm-5 col-xxl-2 Top-brands-item4">
+               <div class="card border-0 shadow text-center">
+                   <div class="card-img-top" ><img style="object-fit: contain;" width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/x/j/-original-imagmkjfhzjhfhhe.jpeg?q=70"></div>
+                   <div class="card-body">
+                    <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                    </div>
+                        
+                   </div>
+                </div>
+              
+           </div>
+           <div class=" col-12 col-sm-5  col-xxl-2 Top-brands-item5">
+               <div class="card border-0 shadow text-center">
+                   <div class="card-img-top"><img width="90%" height="100%" src="https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/w/s/t/-original-imagfx6hzsqu438h.jpeg?q=70"></div>
+                   <div class="card-body">
+                    <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                    </div>
+                        
+                   </div>
+                </div>
+              
+           </div>
+        
+   </div>
+  </div><!--Top Brands-->
+
+
+  <div class="container-fluid Exclusive-sales my-5">
+  <div class="  mx-3 slides1 mb-0  p-5 border shadow">
+    <h2 class=" text-left  Exclusive-sales-heading" style="font-size:50px;">Exclusive Sales</h2>
+
+       <div class="row p-5  ">
+                <div class="col-lg-7 mb-3 Exclusive-sales-box1">
+                  
+                <img src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2019/09/23165047/Importance-of-Books.jpg" class="d-block w-100" alt="...">
+               
+               
+                                           
+               </div>   
+               <div class="Exclusive-sales-box2  d-flex gap-3 mx-auto col-lg-4">
+               <div class="col-5 col-lg-6 row d-lg-flex flex-column gap-5 my-auto mx-auto  Exclusive-sales-item1" >
+                <img src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2019/09/23165047/Importance-of-Books.jpg" class="d-block w-100" alt="...">
+                <img src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2019/09/23165047/Importance-of-Books.jpg" class="d-block w-100" alt="...">
+                <img src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2019/09/23165047/Importance-of-Books.jpg" class="d-block w-100" alt="...">
+                        
+
+              </div>
+
+              <div class="col-5 col-lg-6 row d-lg-flex flex-column gap-5 my-auto mx-auto  Exclusive-sales-item2" >
+                 <img src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2019/09/23165047/Importance-of-Books.jpg" class="d-block w-100" alt="...">
+                 <img src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2019/09/23165047/Importance-of-Books.jpg" class="d-block w-100" alt="...">
+                 <img src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2019/09/23165047/Importance-of-Books.jpg" class="d-block w-100" alt="...">
+                         
+              </div>
+            </div>
+       </div>
+     </div>
+     </div><!--Exclusive-sales-->
+
+
+
+      <div class="Sport-collections container-fluid bg-light py-5">
+        <div class="head1-bar my-4" style=" background-image: linear-gradient(to left, rgb(27, 7, 88) , rgb(35, 82, 238))">
+            <div class="head-bar-content d-flex align-items-center ">
+               <div class="title px-5 w-100  text-light d-flex gap-3 ">Sport Collections</div>
+               <div class="for-more w-100 text-end px-5"> <button class="btn btn-outline-light ">for more<i class="fa fa-solid fa-hand-point-right px-2 text-primary"></i></button></div>
+            </div>
+         </div>
+            
+         <div class=" mx-5 Sport-items">
+            <div class="Sport-item1 border shadow " style="font-size: 20px;">
+                <img  src="https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/u/u/m/-original-imagzyqkxkhdaszz.jpeg?q=70"  alt="...">
+                <div class="Sport-item-content p-3">
+                     <div class="title text-primary ">BRAND : NIKE</div>
+                     <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 2499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 1199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     <div class="card-content p-4 display-6 d-flex gap-4 align-items-center ">
+                        <a href="#"><i class="fa fa-solid fa-heart text-danger"></i></a>
+                        <a href="#">    <i class="fa fa-solid fa-comment text-primary"></i></a>
+                        <a href="#"><i class="fa fa-solid fa-paper-plane text-secondary"></i></a>
+                     </div>
+                     <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                    </div>
+
+                </div>
+           </div>
+           <div class="Sport-item2  border shadow" style="font-size: 20px;">
+            <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/b/h/1/-original-imagqfwbfjnq8wcp.jpeg?q=70"  alt="...">
+            <div class="Sport-item-content p-3">
+                <div class="title text-primary ">BRAND : Adidas</div>
+                <div class="card-content">
+                    <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 3499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 2199.0</span><span style="color:red;"> 60% 0ff </span></span>
+                 </div>
+                 <div class="card-content p-4 display-6 d-flex gap-4 align-items-center ">
+                    <a href="#"><i class="fa fa-solid fa-heart text-danger"></i></a>
+                    <a href="#">    <i class="fa fa-solid fa-comment text-primary"></i></a>
+                    <a href="#"><i class="fa fa-solid fa-paper-plane text-secondary"></i></a>
+                 </div>
+                 <div class="card-title " >
+                    <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                </div>
+
+            </div>
+            
+           </div>
+             <div class="Sport-item3  border shadow" style="font-size: 20px;">
+              <img src="https://rukminim1.flixcart.com/image/832/832/l4ei1e80/shoe/9/t/r/-original-imagfb9ufmuuyazm.jpeg?q=70" alt="...">
+        
+              <div class="Sport-item-content p-3">
+                <div class="title text-primary ">BRAND : Adidas</div>
+                <div class="card-content">
+                    <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                 </div>
+                 <div class="card-content p-4 display-6 d-flex gap-4 align-items-center ">
+                    <a href="#"><i class="fa fa-solid fa-heart text-danger"></i></a>
+                    <a href="#">    <i class="fa fa-solid fa-comment text-primary"></i></a>
+                    <a href="#"><i class="fa fa-solid fa-paper-plane text-secondary"></i></a>
+                 </div>
+                 <div class="card-title " >
+                    <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                </div>
+
+                </div>
+            </div>
+            <div class="Sport-item4  border shadow" style="font-size: 20px;">
+                <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/z/q/f/-original-imagg6r23p7depkr.jpeg?q=70"  alt="...">
+                <div class="Sport-item-content p-3">
+                    <div class="title text-primary ">BRAND:Wildcard</div>
+                    <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     <div class="card-content p-4 display-6 d-flex gap-4 align-items-center ">
+                        <a href="#"><i class="fa fa-solid fa-heart text-danger"></i></a>
+                        <a href="#">    <i class="fa fa-solid fa-comment text-primary"></i></a>
+                        <a href="#"><i class="fa fa-solid fa-paper-plane text-secondary"></i></a>
+                     </div>
+                     <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                    </div>
+    
+                    </div>
+            </div>
+          
+            <div class="Sport-item5   border shadow" style="font-size: 20px;">
+                <img  class="my-4   " src="https://rukminim1.flixcart.com/image/612/612/jybvafk0/racquet/y/s/5/g3-8-89-cm-r501-strung-1-ad-br-6-2-90-badminton-racquet-adrenex-original-imafghzpz4pxmtwv.jpeg?q=70"  alt="...">
+                <div class="Sport-item-content p-3 ">
+                  <div class="title text-primary  ">BRAND : Adrenex</div>
+                  <div class="card-content">
+                    <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 2499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 1999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                 </div>
+                 <div class="card-content p-4 display-6 d-flex gap-4 align-items-center ">
+                    <a href="#"><i class="fa fa-solid fa-heart text-danger"></i></a>
+                    <a href="#">    <i class="fa fa-solid fa-comment text-primary"></i></a>
+                    <a href="#"><i class="fa fa-solid fa-paper-plane text-secondary"></i></a>
+                 </div>
+                 <div class="card-title " >
+                    <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                </div>
+                 </div>
+            </div>
+           <div class="Sport-item6   border shadow" style="font-size: 20px;">
+                  <img class="my-4   " src="https://rukminim1.flixcart.com/image/612/612/kvwpt3k0/racquet/x/y/2/g4-3-25-inches-smash-xp-90-iv-badminton-racket-set-of-2-1-full-original-imag8pcxfgjpftat.jpeg?q=70"  alt="...">
+                  <div class="Sport-item-content p-3 "> 
+                       <div class="title text-primary   ">BRAND : Yonex</div>
+                       <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 2499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 1499.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     <div class="card-content p-4 display-6 d-flex gap-4 align-items-center ">
+                        <a href="#"><i class="fa fa-solid fa-heart text-danger"></i></a>
+                        <a href="#">    <i class="fa fa-solid fa-comment text-primary"></i></a>
+                        <a href="#"><i class="fa fa-solid fa-paper-plane text-secondary"></i></a>
+                     </div>
+                     <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                    </div>
+                    </div>
+           </div>
+             <div class="Sport-item7 border shadow" style="font-size: 20px;">
+              <img  class="my-4   "src="https://rukminim1.flixcart.com/image/612/612/xif0q/bat/a/s/x/1000-new-edition-poplar-willow-hand-crafted-cricket-bat-long-original-imagmzkfbr6kwutr.jpeg?q=70" alt="...">
+                      <div class="Sport-item-content p-3 "> 
+                         <div class="title text-primary   ">BRAND : Spartan</div>
+                         <div class="card-content">
+                            <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                         </div>
+                         <div class="card-content p-4 display-6 d-flex gap-4 align-items-center ">
+                            <a href="#"><i class="fa fa-solid fa-heart text-danger"></i></a>
+                            <a href="#">    <i class="fa fa-solid fa-comment text-primary"></i></a>
+                            <a href="#"><i class="fa fa-solid fa-paper-plane text-secondary"></i></a>
+                         </div>
+                         <div class="card-title " >
+                            <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                        </div>
+                     </div>
+              
+
+
+            </div>
+            <div class="Sport-item8 border shadow" style="font-size: 20px;">
+                <img  src="https://rukminim1.flixcart.com/image/612/612/xif0q/bat/c/0/q/0-5-ceat-new-hitman-combo-size-full-1ball-tannis-populer-willow-original-imaggee8aqfxpf2j.jpeg?q=70"  alt="...">
+          
+                <div class="Sport-item-content p-3 "> 
+                    <div class="title text-primary   ">BRAND : Creet</div>
+                    <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     <div class="card-content p-4 display-6 d-flex gap-4 align-items-center ">
+                        <a href="#"><i class="fa fa-solid fa-heart text-danger"></i></a>
+                        <a href="#">    <i class="fa fa-solid fa-comment text-primary"></i></a>
+                        <a href="#"><i class="fa fa-solid fa-paper-plane text-secondary"></i></a>
+                     </div>
+                     <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                    </div>                
+             </div>
+         
+            </div>
+            
+            <div class="Sport-item9  border shadow" style="font-size: 20px;">
+                <img class="p-2" src="https://rukminim1.flixcart.com/image/612/612/xif0q/shuttle/y/l/s/-original-imaggdsyukp9tcup.jpeg?q=70"  alt="...">
+                <div class="Sport-item-content p-3 "> 
+                    <div class="title text-primary   ">BRAND : Yonex</div>
+                    <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     <div class="card-content p-4 display-6 d-flex gap-4 align-items-center ">
+                        <a href="#"><i class="fa fa-solid fa-heart text-danger"></i></a>
+                        <a href="#">    <i class="fa fa-solid fa-comment text-primary"></i></a>
+                        <a href="#"><i class="fa fa-solid fa-paper-plane text-secondary"></i></a>
+                     </div>
+                     <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-primary w-50 mx-2">BUY</div><div class="btn btn-primary w-50">HOLD</div> </span>
+                    </div>
+                </div>
+                   
+          
+              </div>
+             
+            </div>
+            
+        </div><!--Sport Collection-->
+
+
+
+
+
+
+
+        <div class="Top-brands container-fluid bg-light py-5">
+            <div class="head1-bar my-4" style=" background-image: linear-gradient(to left, rgb(27, 7, 88) , rgb(35, 82, 238))">
+                <div class="head-bar-content d-flex align-items-center ">
+                   <div class="title px-5 w-100  text-light d-flex gap-3 ">Mega Sales on Top-Brands</div>
+                   <div class="for-more w-100 text-end px-5"> <button class="btn btn-outline-light ">for more<i class="fa fa-solid fa-hand-point-right px-2 text-primary"></i></button></div>
+                </div>
+             </div>
+   
+         <div class=" mx-5 Top-brands-items">
+            <div class="Top-Brands-item1 border shadow " style="font-size: 20px;">
+                <img  src="https://rukminim1.flixcart.com/image/612/612/kkh6zrk0/watch/n/p/u/as000010e-allen-solly-original-imafzt8zswgzrueb.jpeg?q=70"  alt="...">
+                <div class="Sport-item-content p-3">
+                     <div class="title text-primary ">BRAND : Allen solly</div>
+                     <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     
+                     <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-danger  mx-auto ">ShopNow</div> </span>
+                    </div>
+
+                </div>
+           </div>
+           <div class="Top-Brands-item2  border shadow" style="font-size: 20px;">
+            <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/watch/v/g/p/-original-imagqfwbfkmamdy8.jpeg?q=70"  alt="...">
+            
+                <div class="Sport-item-content p-3">
+                    <div class="title text-primary ">BRAND : Fastrack </div>
+                    <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     
+                     <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-danger  mx-auto ">ShopNow</div> </span>
+                    </div>
+
+               </div>
+            
+           </div>
+             <div class="Top-Brands-item3  border shadow" style="font-size: 20px;">
+              <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/watch/6/w/o/-original-imagzkhfpqg3v8y6.jpeg?q=70" alt="...">
+        
+              <div class="Sport-item-content p-3">
+                <div class="title text-primary ">BRAND : Sonata </div>
+                <div class="card-content">
+                    <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                 </div>
+                 
+                 <div class="card-title " >
+                    <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-danger  mx-auto ">ShopNow</div> </span>
+                </div>
+
+           </div>
+            </div>
+            <div class="Top-Brands-item4  border shadow" style="font-size: 20px;">
+                <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/h/z/k/xl-st1-vebnor-original-imagn7hdhtgpghjk.jpeg?q=70"  alt="...">
+                <div class="Sport-item-content p-3">
+                    <div class="title text-primary ">BRAND :US POLO</div>
+                    <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     
+                     <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-danger  mx-auto ">ShopNow</div> </span>
+                    </div>
+    
+                    </div>
+            </div>
+          
+            <div class="Top-Brands-item5   border shadow" style="font-size: 20px;">
+                <img   src="https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/x/t/p/xl-546545485-try-this-original-imaghpyxt9kufgza.jpeg?q=70"  alt="...">
+                <div class="Sport-item-content p-3 ">
+                  <div class="title text-primary  ">BRAND : Peter</div>
+                  <div class="card-content">
+                    <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                 </div>
+                 
+                 <div class="card-title " >
+                    <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-danger  mx-auto ">ShopNow</div> </span>
+                </div>
+    
+                 </div>
+            </div>
+           <div class="Top-Brands-item6   border shadow" style="font-size: 20px;">
+                  <img  src="https://rukminim1.flixcart.com/image/612/612/xif0q/watch/c/b/w/-original-imagnre8b8ydbrwe.jpeg?q=70"  alt="...">
+                  <div class="Sport-item-content p-3 "> 
+                       <div class="title text-primary   ">BRAND : Fastrack</div>
+
+                       <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     
+                     <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-danger  mx-auto ">ShopNow</div> </span>
+                    </div>
+                    </div>
+           </div>
+             <div class="Top-Brands-item7 border shadow" style="font-size: 20px;">
+              <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/dress/d/h/f/m-155tk2854a-selvia-original-imagha9zz8kshheh.jpeg?q=70" alt="...">
+                      <div class="Sport-item-content p-3 "> 
+                         <div class="title text-primary   ">BRAND : Selvia</div>
+
+                         <div class="card-content">
+                            <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                         </div>
+                         
+                         <div class="card-title " >
+                            <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-danger  mx-auto ">ShopNow</div> </span>
+                        </div>
+                     </div>
+              
+
+
+            </div>
+            <div class="Top-Brands-item8 border shadow" style="font-size: 20px;">
+                <img  src="https://rukminim1.flixcart.com/image/612/612/kyhlfgw0/kurta/l/s/f/l-gw89-glowworld-original-imagapsmbmafgngg.jpeg?q=70"  alt="...">
+          
+                <div class="Sport-item-content p-3 "> 
+                    <div class="title text-primary   ">BRAND : Glowworld</div>
+
+                    <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     
+                     <div class="card-title " >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-danger  mx-auto ">ShopNow</div> </span>
+                    </div>
+                </div>
+         
+            </div>
+            
+            <div class="Top-Brands-item9  border shadow" style="font-size: 20px;">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l4n2oi80/wall-clock/0/k/m/sk-multistoreworld-analog-31-cm-x-31-cm-wall-clock-taitanic-best-original-imagfht2bcxxjnyw.jpeg?q=70"  alt="...">
+                <div class="Sport-item-content p-3 "> 
+                    
+                    <div class="title text-primary   ">BRAND : Titanic</div>
+                    <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     
+                     <div class="card-title my-3" >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-danger  mx-auto ">ShopNow</div> </span>
+                    </div>
+                </div>
+              </div>
+             
+            </div>
+        </div><!--mega sales-->
+
+
+
+
+
+
+        <div class="Home-Furniture container-fluid bg-light py-5 ">
+            <div class="head1-bar my-4" style=" background-image: linear-gradient(to left, rgb(27, 7, 88) , rgb(35, 82, 238))">
+                <div class="head-bar-content d-flex align-items-center ">
+                   <div class="title px-5 w-100  text-light d-flex gap-3 ">Home Furniture</div>
+                   <div class="for-more w-100 text-end px-5"> <button class="btn btn-outline-light ">for more<i class="fa fa-solid fa-hand-point-right px-2 text-primary"></i></button></div>
+                </div>
+             </div>
+         <div class=" mx-5 Home-brands-items">
+            <div class="Home-Brands-item1 border shadow " style="font-size: 20px;">
+                <img  class="p-1" src="https://rukminim1.flixcart.com/image/312/312/jialea80/television/q/c/k/samsung-75nu8000-original-imaf64ffsapydczh.jpeg?q=70"  alt="...">
+                <div class="Sport-item-content p-3">
+                     <div class="title text-primary ">BRAND : Samsung</div>
+                     <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;" >Rating : 4.5  
+                            <i class="fa fa-sharp fa-solid fa-star"></i> 
+                            <i class="fa fa-sharp fa-solid fa-star"></i>
+                             <i class="fa fa-sharp fa-solid fa-star"></i> 
+                             <i class="fa fa-sharp fa-solid fa-star"></i>
+                              <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i>
+                        </span>
+                     </div>
+                     <div class="card-title my-3" >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-success   mx-auto ">ShopNow</div> </span>
+                    </div>
+
+                </div>
+           </div>
+           <div class="Home-Brands-item2  border shadow" style="font-size: 20px;">
+            <img class="p-1" src="https://rukminim1.flixcart.com/image/312/312/xif0q/television/k/x/s/-original-imaghzmvjnsvnhhs.jpeg?q=70"  alt="...">
+            
+                <div class="Sport-item-content p-3">
+                    <div class="title text-primary ">BRAND : LG </div>
+                    <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;" >Rating : 4.5  
+                            <i class="fa fa-sharp fa-solid fa-star"></i> 
+                            <i class="fa fa-sharp fa-solid fa-star"></i>
+                             <i class="fa fa-sharp fa-solid fa-star"></i> 
+                             <i class="fa fa-sharp fa-solid fa-star"></i>
+                              <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i>
+                        </span>
+                     </div>
+                     <div class="card-title my-3" >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-success   mx-auto ">ShopNow</div> </span>
+                    </div>
+               </div>
+            
+           </div>
+             <div class="Home-Brands-item3  border shadow" style="font-size: 20px;">
+              <img src="https://rukminim1.flixcart.com/image/312/312/xif0q/refrigerator-new/d/k/c/-original-imagpegp4kgx56kk.jpeg?q=70" alt="...">
+        
+              <div class="Sport-item-content p-3">
+                <div class="title text-primary ">BRAND : Haier </div>
+                <div class="card-content">
+                    <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                 </div>
+                 <div class="card-content">
+                    <span style="font-size: 18px; font-weight: 900;" >Rating : 4.5  
+                        <i class="fa fa-sharp fa-solid fa-star"></i> 
+                        <i class="fa fa-sharp fa-solid fa-star"></i>
+                         <i class="fa fa-sharp fa-solid fa-star"></i> 
+                         <i class="fa fa-sharp fa-solid fa-star"></i>
+                          <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i>
+                    </span>
+                 </div>
+                 <div class="card-title my-3" >
+                    <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-success   mx-auto ">ShopNow</div> </span>
+                </div>
+
+           </div>
+            </div>
+            <div class="Home-Brands-item4  border shadow" style="font-size: 20px;">
+                <img class="px-2" src="https://rukminim1.flixcart.com/image/312/312/xif0q/air-conditioner-new/r/n/1/-original-imagkqs8hznfmzty.jpeg?q=70"  alt="...">
+                <div class="Sport-item-content p-3">
+                    <div class="title text-primary ">BRAND :Voltas</div>
+                    <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;" >Rating : 4.5  
+                            <i class="fa fa-sharp fa-solid fa-star"></i> 
+                            <i class="fa fa-sharp fa-solid fa-star"></i>
+                             <i class="fa fa-sharp fa-solid fa-star"></i> 
+                             <i class="fa fa-sharp fa-solid fa-star"></i>
+                              <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i>
+                        </span>
+                     </div>
+                     <div class="card-title my-3" >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-success   mx-auto ">ShopNow</div> </span>
+                    </div>
+                    </div>
+            </div>
+          
+            <div class="Home-Brands-item5   border shadow" style="font-size: 20px;">
+                <img   src="https://rukminim1.flixcart.com/image/612/612/xif0q/air-cooler/g/5/m/-original-imagnhm7yahtsdah.jpeg?q=70"  alt="...">
+                <div class="Sport-item-content p-3 ">
+                  <div class="title text-primary  ">BRAND : Bajaj</div>
+                  <div class="card-content">
+                    <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                 </div>
+                 <div class="card-content">
+                    <span style="font-size: 18px; font-weight: 900;" >Rating : 4.5  
+                        <i class="fa fa-sharp fa-solid fa-star"></i> 
+                        <i class="fa fa-sharp fa-solid fa-star"></i>
+                         <i class="fa fa-sharp fa-solid fa-star"></i> 
+                         <i class="fa fa-sharp fa-solid fa-star"></i>
+                          <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i>
+                    </span>
+                 </div>
+                 <div class="card-title my-3" >
+                    <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-success   mx-auto ">ShopNow</div> </span>
+                </div>
+    
+                 </div>
+            </div>
+           <div class="Home-Brands-item6   border shadow" style="font-size: 20px;">
+                  <img  src="https://rukminim1.flixcart.com/image/312/312/xif0q/washing-machine-new/k/h/s/-original-imagzhnhchytgngf.jpeg?q=70"  alt="...">
+                  <div class="Sport-item-content p-3 "> 
+                       <div class="title text-primary   ">BRAND : LG</div>
+
+                       <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;" >Rating : 4.5  
+                            <i class="fa fa-sharp fa-solid fa-star"></i> 
+                            <i class="fa fa-sharp fa-solid fa-star"></i>
+                             <i class="fa fa-sharp fa-solid fa-star"></i> 
+                             <i class="fa fa-sharp fa-solid fa-star"></i>
+                              <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i>
+                        </span>
+                     </div>
+                     <div class="card-title my-3" >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-success   mx-auto ">ShopNow</div> </span>
+                    </div>
+                    </div>
+           </div>
+             <div class="Home-Brands-item7 border shadow" style="font-size: 20px;">
+              <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/container/8/r/c/5-fridge-storage-basket-food-storage-container-with-removable-original-imagn6dgwhzhkzkq.jpeg?q=70" alt="...">
+                      <div class="Sport-item-content p-3 "> 
+                        <div class="title text-primary   ">BRAND :Marq </div>                      
+  
+                        <div class="card-content">
+                            <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                         </div>
+                         <div class="card-content">
+                            <span style="font-size: 18px; font-weight: 900;" >Rating : 4.5  
+                                <i class="fa fa-sharp fa-solid fa-star"></i> 
+                                <i class="fa fa-sharp fa-solid fa-star"></i>
+                                 <i class="fa fa-sharp fa-solid fa-star"></i> 
+                                 <i class="fa fa-sharp fa-solid fa-star"></i>
+                                  <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i>
+                            </span>
+                         </div>
+                         <div class="card-title my-3" >
+                            <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-success   mx-auto ">ShopNow</div> </span>
+                        </div>
+                     </div>
+              
+
+
+            </div>
+            <div class="Home-Brands-item8 border shadow" style="font-size: 20px;">
+                <img  src="https://rukminim1.flixcart.com/image/612/612/kqttg280/bottle/b/e/y/1000-hector-1000-pet-water-bottle-set-of-2-1-litre-each-blue-2-original-imag4rfyapfygekj.jpeg?q=70"  alt="...">
+          
+                <div class="Sport-item-content p-3 "> 
+                    <div class="title text-primary   ">BRAND : Milton</div>
+
+                      <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;" >Rating : 4.5  
+                            <i class="fa fa-sharp fa-solid fa-star"></i> 
+                            <i class="fa fa-sharp fa-solid fa-star"></i>
+                             <i class="fa fa-sharp fa-solid fa-star"></i> 
+                             <i class="fa fa-sharp fa-solid fa-star"></i>
+                              <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i>
+                        </span>
+                     </div>
+                     <div class="card-title my-3" >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-success   mx-auto ">ShopNow</div> </span>
+                    </div>
+                </div>
+         
+            </div>
+            
+            <div class="Home-Brands-item9  border shadow" style="font-size: 20px;">
+                <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/speaker/home-theatre/i/d/6/60w-bluetooth-home-theater-marq-by-flipkart-original-imaghphkfa8wjyhn.jpeg?q=70"  alt="...">
+                <div class="Sport-item-content p-3 "> 
+                    
+                    <div class="title text-primary   ">BRAND :Marq </div>
+                    <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;">Price:<br><strong style="text-decoration: line-through;color: red;">INR 1499.0</strong><span style="font-size: 23px;font-weight: 80px; margin-left: 15px;">INR 999.0</span><span style="color:red;"> 60% 0ff </span></span>
+                     </div>
+                     <div class="card-content">
+                        <span style="font-size: 18px; font-weight: 900;" >Rating : 4.5  
+                            <i class="fa fa-sharp fa-solid fa-star"></i> 
+                            <i class="fa fa-sharp fa-solid fa-star"></i>
+                             <i class="fa fa-sharp fa-solid fa-star"></i> 
+                             <i class="fa fa-sharp fa-solid fa-star"></i>
+                              <i class="fa fa-sharp fa-solid fa-star-half-stroke"></i>
+                        </span>
+                     </div>
+                     <div class="card-title my-3" >
+                        <span style="color:red;word-wrap: break-word; " class="d-flex"> <div class="btn btn-success   mx-auto ">ShopNow</div> </span>
+                    </div>
+                </div>
+              </div>
+             
+            </div>
+        </div><!--Home furniture-->
+
+
+
+
+
+
+
+
+        <div class="team-title text-center text-primary py-5" style="font-size: 35px;font-weight: 800;font-variant: small-caps;">Our Team<hr></div>
+        <div class="container-fluid our-team py-5 row justify-content-center align-items-center" id="about">
+           
+              <div class="row col-12 col-lg-7 gap-5">
+                    <div class="mx-xxl-5 col-12 col-xxl-8 shadow py-2 d-flex align-items-center person">
+                        <img src="User_icon.jpg" style="object-fit: cover;" alt="image">
+                         <div class="team-info ">
+                             <div class="name text-dark">Name : </div>
+                             <div class="Domain text-dark">Domain :</div>
+                         </div>
+                    </div>
+                    <div class="col-12 col-xxl-8 shadow py-2 d-flex align-items-center  person">
+                        <img src="User_icon.jpg" style="object-fit: cover;" alt="image">
+                         <div class="team-info ">
+                             <div class="name text-dark">Name : </div>
+                             <div class="Domain text-dark">Domain :</div>
+                         </div>
+                    </div>
+                    <div class="col-12 col-xxl-8 shadow py-2 d-flex align-items-center  person">
+                        <img src="User_icon.jpg" alt="image">
+                         <div class="team-info ">
+                             <div class="name text-dark">Name : </div>
+                             <div class="Domain text-dark">Domain :</div>
+                         </div>
+                    </div>
+                    <div class=" mx-xxl-5 col-12 col-xxl-8 shadow py-2 d-flex align-items-center  person">
+                        <img src="User_icon.jpg" style="object-fit: cover;" alt="image">
+                         <div class="team-info ">
+                             <div class="name text-dark">Name : </div>
+                             <div class="Domain text-dark">Domain :</div>
+                         </div>
+                    </div>
+                </div>
+                
+                <div class="row col-12 col-xxl-4 d-flex justify-content-around text-center  ">
+                   
+                    <div class="col-12 card">
+                        <div class="card-img-top ">
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg"  alt="image">
+                         </div>
+                         
+                         <div class="card-body">
+
+                            <div class="card-content team-info ">
+                                <div class="name text-dark">Name : </div>
+                                <div class="Domain text-dark">Domain :</div>
+                                
+                                <div class="col-9 d-flex text-light d-flex justify-content-around my-4 mx-auto"> 
+                                   
+                                    <a href="#"><i class="fa fa-google fa-stack-3x"></i></a>
+                                    <a href="#"><i class="fa fa-facebook fa-stack-3x"></i></a>
+                                    <a href="#"><i class="fa fa-twitter fa-stack-3x"></i></a>
+                                    <a href="#"><i class="fa fa-instagram fa-stack-3x"></i></a>
+                                 </div>
+                            </div>
+                             
+                         </div>
+                    </div>
+       
+
+                </div>
+          
+        </div><!--Out Team-->
+      
+        <footer class="container-fluid bg-dark "  id="contactus">
+            <div class="section row   justify-content-around align-items-center pt-5 ">
+                 <div class="  section-1 d-flex justify-content-center col-12   col-xl-3">
+                     <div class="section-head  text-center" style="font-size: 35px;font-variant: small-caps;">
+                      
+                         <img src="https://png.pngtree.com/template/20191015/ourmid/pngtree-abstract-two-knife-icon-logo-image_317352.jpg" alt="image" width="230px" height="230px" style="background:white;border-radius:50%;">
+                         <div class="title  text-danger p-2">Pic Your Thing</div>
+                         <div class="section-content    text-light " style="font-size: 19px;">
+                            At YouTube, we’re committed to connecting you with health content from authoritative sources to help you stay informed and live your healthiest life. We’ve developed several features to give you more context on the health content you find on YouTube.
+                         </div>
+                    </div>
+                  
+                 </div>
+                 <div class=" col-3 col-md-3   col-xl-2 text-dark">
+                    <div class="title pt-5 pb-2 text-danger " style="font-size: 40px;font-variant: small-caps;" >Products</div>
+                        <ul type="none" style="margin: 0;padding: 0;">
+                            <a href="#"> <li >Fashion</li></a>
+                            <a href="#"> <li>Trends</li></a>
+                            <a href="#"> <li>Mobiles</li></a>
+                            <a href="#"> <li>Electronics</li></a>
+                        </ul>
+
+                 </div>
+                 <div class="  col-3 col-md-3   col-xl-2 ">
+                    <div class="title pt-5 pb-2 text-danger" style="font-size: 40px;font-variant: small-caps;" >Pages</div>
+                    <ul type="none" style="margin: 0;padding: 0;">
+                        <a href="#"> <li >Home </li></a>
+                        <a href="#"> <li>Our Team </li></a>
+                        <a href="#"> <li>Footer</li></a>
+                        <a href="#"> <li>Electronics</li></a>
+                    </ul>
+
+                 </div>
+                 <div class="  col-3 col-md-3  col-xl-2 ">
+                    <div class="title pt-5 pb-2 text-danger" style="font-size: 40px;font-variant: small-caps;" >Follow Us</div>
+                    <ul type="none" style="margin: 0;padding: 0;" >
+                        <a href="#"> <li >Fashion</li></a>
+                        <a href="#"> <li>Trends</li></a>
+                        <a href="#"> <li>Mobiles</li></a>
+                        <a href="#"> <li>Electronics</li></a>
+                    </ul>
+
+                 </div>
+
+
+                 <div class="col-9 d-flex text-light d-flex justify-content-around my-5"> 
+                      
+                    <a href="#"><i class="fa fa-google fa-stack-3x"></i></a>
+                    <a href="#"><i class="fa fa-facebook fa-stack-3x"></i></a>
+                    <a href="#"><i class="fa fa-twitter fa-stack-3x"></i></a>
+                    <a href="#"><i class="fa fa-instagram fa-stack-3x"></i></a>
+                 </div>
+
+                 <div class="col-12 copy text-center p-5 h2 m-0 "  style="height: 100px;font-variant: small-caps;" >
+                    <p style="color: white;"> © 2023 Copyright: Pic Your Things</p>
+                 </div>
+                
+               
+            </div>
+       
+
+        </footer>
+
+      
+
+        
+</body>
+
+<script src="MainPage.js"></script>
+<script src="Signin_form.js"></script>
+
+
+</html>

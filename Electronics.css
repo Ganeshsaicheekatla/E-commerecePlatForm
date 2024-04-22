@@ -1,0 +1,192 @@
+
+/*heading*/
+.page-head{
+    height: 150px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to left, rgb(27, 7, 88) , rgb(35, 82, 238));
+   
+   
+    font-weight: 900;
+    
+}
+.user-profile{
+ position: relative;
+ width: 60px;
+ height: 60px;
+ background-color: white;
+ border-radius: 50%;
+
+}
+
+
+.user{
+ width: 100px;
+ margin-top: 20px;
+}
+.user-name{
+  font-size: 23px;
+}
+.user-details{
+  width: 350px;
+  
+  float: right;
+  margin-right: 10px;
+  font-size: 30px;
+  position: absolute;
+  top:100px;
+  right: 150px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: none;
+  z-index: 1;
+ 
+}
+.head1-bar .btn{
+ width: 150px;
+
+ font-size: 20px;
+}
+.head1-bar{
+     height: 80px;
+     width: 100%;
+    
+     
+}
+.head-bar-content{
+   height: inherit;
+   font-size: 25px;
+   color: white;
+}
+.title{
+    font-size: 39px;
+    font-style: bold;
+    font-weight: 1000;
+    margin-top: 10px;
+}
+
+
+/*heading session
+pick your thing*/ 
+.heading-session{
+    text-align: center;
+   /* border-bottom: 1px solid black; */
+    padding:10px 0px ;
+    position: sticky;
+    top: 0px;
+    background-color: aliceblue;
+    font-size: 30px;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.navbar1{
+    width: 100%;
+    position: sticky;
+    top: 0px;
+}
+/*heading*/
+
+/*page starting*/
+.page{
+    background-color: aliceblue;
+}
+
+/*mobile items*/ 
+.item{
+  width: 340px;
+  height: 490px;
+  padding: 10px;
+  margin: auto;
+
+  
+
+}
+.item-img img{
+    width: 300px;
+    height: 220px;
+    object-fit: contain;
+}
+.item-footer button{
+    width: 80px;
+  
+    
+}
+.col{
+    transition: all 3 ease-in ;
+}
+
+.col:hover{
+    transform: scale(1.03,1.03);
+    
+}
+
+
+
+/*mobile items*/
+
+
+
+
+
+/*buying products*/
+.card{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+.Buying_product{
+   display: none;
+}
+
+
+.Buying_product{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.product-img {
+    width: 520px;
+    height: 350px;
+  
+}
+.product-img img{
+
+   object-fit: contain;
+   height: inherit;
+   width: inherit;
+
+}
+.img-title{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.product-content{
+    margin: 0 95px;
+    font-size: 25px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pro-id{
+    margin: 10px 0px;;
+}
+
+.card-footer .btn{
+  font-size: 20px;
+}
+/*buying end*/
+
+
+/*scrolling */
+.disable-scrolling{
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="Header.css">
+    <link rel="stylesheet" href="Electronics.css">
+     
+  
+    <title>Document</title>
+    
+    
+    <style>
+       .title{
+        height: 90px;
+         position: sticky;
+         top: 0;
+         z-index: 100;
+       }
+       .item{
+        position: relative;
+       }
+       .remove-icon{
+     
+        position: absolute;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        color: red;
+        right: 10px;
+        top: 20px;
+        
+        
+       }
+       .remove-icon button{
+        border: none;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        color: red;
+        
+       }
+       
+      
+      .remove-icon i:hover{
+        cursor: grab;
+      }
+     
+       .btn{
+         color: black;
+       }
+       .notification-icon .fa{
+          font-size:50px;
+       }
+       .notification-icon a{
+        text-decoration: none;
+       }
+       .item{
+        height: auto;
+       }
+       .item-content button{
+         display: none;
+       }
+       .show-now{
+         height: 550px;
+       }
+       .show-now .your_cart{
+         font-size: 50px;
+         font-weight: 1000;
+         padding: 20px;
+       }
+
+       .noof_items_image img,.item_price img{
+             width: 150px;
+             height: 150px;
+             border-radius: 50%;
+       }
+       .noof_items .title-i,.noof_items .title-p{
+        height: 90px;
+         position: sticky;
+         top: 0;
+         font-size: 35px;
+       }
+      
+    </style>
+
+  
+</head>
+
+<body onload="load_page_items()" >
+
+    <div class="page-head container-fluid d-flex   align-items-center">
+        <div class="page-title text-light mx-auto">Pic Ur Things</div>
+        <div class="page-head-info d-flex align-items-center gap-5">
+             
+             <div class="notification-icon">
+               <span class="">
+
+               </span>
+               
+                <a href="Mainpage.html"><i class="fa fa-solid fa-house text-light"></i></a>
+             </div>
+             <div class="no-of-days text-light ">
+               <i class="fa fa-solid fa-fire ""></i>
+               <span>0</span>
+
+             </div>
+             
+
+        </div>
+       
+   </div>
+   <div class="title m-0 bg-warning d-flex align-items-center px-5"><i class="fa fas fa-shopping-cart px-5"></i>your Cart items</div>
+    <div class="container-fluid bg-light  p-3">
+         
+       
+        <div class="row   d-flex justify-content-around  ">
+
+          
+
+        </div>
+          
+    </div>
+
+    <div class="container-fluid bg-dark p-3">
+       <div class="row d-flex justify-content-around  ">
+
+              <div class="col-10 col-xxl-5 d-flex justify-content-center align-items-center text-light border p-5 gap-5">
+                   <div class="noof_items_image">
+                     <div class="img">
+                        <img src="https://cdn-icons-png.flaticon.com/512/487/487932.png" alt="">
+                     </div>
+                  </div>
+                  <div class="noof_items d-flex flex-column justify-content-center">
+                    <div class="title-i px-5  px-sm-0">
+                          Total items
+                    </div>
+                    <div class="number text-center display-5">
+                        0
+                    </div>
+                 </div>
+                   
+            </div>
+            <div class="col-10 col-xxl-5 d-flex justify-content-center align-items-center text-light border p-5 gap-5 my-3 m-xxl-0">
+              <div class="item_price">
+                <div class="img">
+                   <img src="https://cdn-icons-png.flaticon.com/512/747/747781.png" alt="">
+                </div>
+             </div>
+             <div class="noof_items d-flex flex-column justify-content-center">
+               <div class="title-p px-5 px-sm-0">
+                     Total Price
+               </div>
+               <div class="price text-center display-5">
+                   0
+               </div>
+            </div>
+              
+          </div>
+       </div>
+
+    </div>
+    
+</body>
+<script>
+   
+</script>
+  <script src="Cart_page.js"></script>
+</html>

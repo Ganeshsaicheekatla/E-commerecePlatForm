@@ -1,0 +1,623 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/*head*/
+.page-head{
+    height: 150px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid white;
+    
+}
+.user-profile{
+ position: relative;
+ width: 60px;
+ height: 60px;
+ background-color: white;
+ border-radius: 50%;
+
+}
+
+
+.user{
+ width: 100px;
+ margin-top: 20px;
+ margin-right: 120px;
+}
+
+@media screen and (max-width:1000px){
+    .user{
+        margin-right: 40px;
+       }
+}
+.user-name{
+  font-size: 23px;
+}
+.user-details{
+  width: 350px;
+  
+  float: right;
+  margin-right: 10px;
+  font-size: 30px;
+  position: absolute;
+  top:100px;
+  right: 150px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: none;
+  z-index: 15;
+ 
+}
+.user-details .btn{
+ width: 150px;
+ color: white;
+ font-size: 20px;
+}
+/*head*/
+
+.navbar-nav li a{
+    color: white;
+    margin-top: 15px;
+    font-size: 33px;
+}
+
+.nav-brands .nav-link{
+    font: 25px;
+    font-weight:bolder;
+
+}
+
+.navbar-toggler{
+    width: 60px;
+    margin-right: 30px;
+}
+
+/*navbbar*/
+.nav-menu,.navbar{
+    background-image:  linear-gradient(to left,rgb(16, 46, 242),rgb(48, 39, 175));;
+}
+.navbar-nav >li{
+ margin: 0px 15px;
+ color: white;
+ text-align: center;
+ font-size: 25px;
+}
+
+
+.nav-item:hover a {
+    background-color: white;
+    color: black;    
+}
+
+.nav-menu{
+    height: 100px;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+  
+
+}
+
+
+/*coursel*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 200px;
+  width: 300px;
+  outline: black;
+  border-radius: 50%;
+  border: 6px solid black;
+  box-shadow: 0 0 30px black;
+  background-color: black;
+
+}
+.item{
+    background-color:white;
+    color: black;
+    font-size: 20px;
+   padding: 10px;
+    width: 100%;
+    height: 70%;
+}
+.item .img_cou {
+
+   width: 500px;
+   height: 350px;
+  
+}
+.item .img_cou img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.content{
+    width: 40%;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0 0 10px solid white;
+}
+.line{
+
+    background-color: black;
+    width: 5px;
+    height: 400px;
+   
+}
+
+/*coursel*/
+
+
+
+
+.btn1{
+    border-radius: 20px;
+    border: none;
+    width: 90px;
+    height: 35px;
+    background-color:	rgb(136, 8, 8);
+    opacity: 1;
+    margin: 0 35px;
+}
+.menu-btn{
+    margin-top: 60px;
+    text-align: center;
+}
+.btn1:hover{
+    background-color:white ;
+}
+
+
+/* TOp fiction books*/
+.Top-Books-main{
+    display: flex;
+    justify-content: center;
+}
+.Top-Books-head{
+    text-align: center;
+}
+
+
+
+.Top-Book-img1 img,.Top-Book-img2 img,.Top-Book-img3 img{
+   width: 75%;
+   height: 250px;
+   margin-top: 15px;
+   border-radius:5px;
+   border: none;
+}
+
+.Top-Book-img1 button,.Top-Book-img2 button{
+    margin: 10px;
+    width: 90px;
+} 
+
+.Top-Book-img1 .card-body span,.Top-Book-img2 .card-body span,.Top-Book-img3 .card-body span{
+    font-size: 15px;
+    
+}
+
+
+@media screen and (min-width:550px){
+    .Top-Book-img1 img,.Top-Book-img2 img{
+        width: 65%;
+        height: 250px;
+     }
+    
+     .card{
+       
+        height: 200px;
+     }
+     .Top-Book-img3 img{
+        margin-top: 18px;
+        border-radius: 5px;
+        width: 65%;
+        height: 250px;
+
+     }
+  
+    
+     
+    
+}
+
+@media screen and (max-width:770px){
+    .Top-Book-img1 img,.Top-Book-img2 img{
+        width: 45%;
+        height: 250px;
+     }
+    
+     .card{
+        border: none;
+        height: 300px;
+     }
+     .Top-Book-img3 img{
+        width: 45%;
+        height: 250px;
+        margin-top: 18px;
+        border-radius: 5px;
+       
+     }
+  
+  
+    
+}
+
+@media screen and (min-width:950px) {
+  
+    .Top-Book-img3,.Top-Book-img1,.Top-Book-img2{
+  
+    width: auto;
+
+    }
+   .Top-Book-img1 img,.Top-Book-img2 img{
+        width: 45%;
+        height: 250px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+    
+  
+}
+.Top-Book-img3 button{
+    width: 90px;
+    margin: 8px;
+}
+
+
+
+
+
+/*topbook-end */
+
+
+/*font awesome */
+.Awesome-brand .card img{
+    width: 250px;
+    height: 250px;
+}
+
+/*end awesome */
+
+/* new arrival start*/
+.new-arrival{
+    background-color: aquamarine;
+    padding: 35px;
+   
+    
+}
+.new-arrival-items{
+    display: flex;
+    justify-content: center;
+}
+.new-arrival-title{
+    text-align: left;
+}
+
+.new-arrival-title > i{
+    font-size: 15px;;
+    margin:0px 6px ;
+    color: blue;
+    
+}
+
+.new-arrival-row *{
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  
+    margin: 20px 0px;;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+ 
+}
+
+.new-arrival-row .card .card-body{
+    padding-top:0px;
+    margin-top: 0px;
+}
+.new-arrival-row .card .card-img-top{
+    
+    height: 290px;
+    
+    width: 80%;
+    margin: auto;
+
+}
+
+.card-img-top img{
+    object-fit: contain;
+}
+.new-arrival-item1:hover,.new-arrival-item2:hover,
+.new-arrival-item3:hover,.new-arrival-item4:hover,
+.new-arrival-item5:hover{
+    transform: translate(-10px,-10px);
+
+}
+
+
+/* new arrival end*/
+
+
+
+/* carousel slides Awesome Brands */
+ .Awesome-brands-carousel *{
+  margin: 0px;
+  padding: 0px;
+}
+
+@media screen  and (min-width:800px){
+    .carousel-item img{
+        width: 100%;
+        height: 490px;
+        object-fit: cover   ;
+    }
+    
+}
+@media screen and(max-width:800px) {
+    .carousel-item img{
+        width: 100%;
+        height: 200px;
+        object-fit: contain ;
+    }
+    
+}
+.carousel-caption{
+  
+}
+
+ .Awesome-brand{
+    display: flex;
+    margin: 0;
+    padding: 20px;
+    justify-content: space-evenly;
+ }
+  @media screen and (max-width:950px){
+    .Awesome-brands-item1,.Awesome-brands-item2{
+        display: none;
+     }
+    
+  }
+  .Awesome-brands-item1 img,.Awesome-brands-item2 img{
+    height: 200px;
+      
+  }
+
+
+
+/*slides end*/
+
+/* TOp picks*/
+
+.Top-picks-item1 .card,.Top-picks-item2 .card,.Top-picks-item4 .card,.Top-picks-item5 .card{
+    padding: 30px;
+    
+}  
+
+.Top-picks-item3 .card{
+    padding: 20px;
+   
+}
+
+@media screen and (max-width:1250px) {
+    .Top-picks-item1,.Top-picks-item2,.Top-picks-item3,.Top-picks-item4,.Top-picks-item5{
+        margin-bottom: 30px;
+        
+       
+    }  
+    .Top-picks-item1 .card,.Top-picks-item2  .card,.Top-picks-item3  .card,.Top-picks-item4  .card,.Top-picks-item5  .card{
+        
+        margin-left:5% ;
+        
+        
+
+
+    }  
+    .Top-picks-item3 .card{
+        padding: 20px;
+        
+       
+    }
+}
+
+
+/*top picks*/
+
+/*trend setter*/
+.Trend-setter-item1 .card,.Trend-setter-item2 .card,.Trend-setter-item4 .card,.Trend-setter-item5 .card{
+    height: 350px;
+    padding: 10px;
+   
+}  
+.Trend-setter-item2 img,.Trend-setter-item1 img,.Trend-setter-item4 img,.Trend-setter-item5 img{
+    height: 270px;
+}
+.Trend-setter-item3 img{
+    
+    padding: 20px;
+    height: 270px;
+
+}
+@media screen and (max-width:1250px) {
+    .Trend-setter-item1,.Trend-setter-item2,.Trend-setter-item3,.Trend-setter-item4,.Trend-setter-item5{
+        margin-bottom: 30px;
+        
+       
+    }  
+    .Trend-setter-item1 .card,.Trend-setter-item2  .card,.Trend-setter-item3  .card,.Trend-setter-item4  .card,.Trend-setter-item5  .card{
+       
+        margin-left:5% ;
+
+    }  
+   
+  
+}
+
+
+
+/*trend setter */
+
+.special-item1 .card,.special-item2 .card,.special-item3 .card,.special-item4 .card,.special-item5 .card{
+    
+    padding: 20px;
+    
+   
+}  
+
+
+
+/*special products*/
+@media screen and (max-width:1080px) {
+    .special-item1,.special-item2,.special-item3,.special-item4,.special-item5{
+        margin-bottom: 30px;
+        
+       
+    }  
+    .special-item1 .card,.special-item2  .card,.special-item3  .card,.special-item4  .card,.special-item5  .card{
+        padding: 10px;
+       
+        
+
+    }  
+  
+}
+
+
+
+/*special products */
+.Top-brands-item1 .card,.Top-brands-item2 .card,.Top-Brands-item3 .card,.Top-brands-item4 .card,.Top-brands-item5 .card{
+  
+    padding: 20px;
+    
+   
+} 
+
+.Top-brands-item3 .card
+{
+    padding: 20px;
+
+}
+
+
+
+
+/*Top Brands*/
+@media screen and (max-width:920px) {
+    .Top-brands-item1,.Top-brands-item2,.Top-brands-item3,.Top-brands-item4,.Top-brands-item5{
+        margin-bottom: 30px;
+       
+        
+       
+    }  
+     .Top-brands-item1 .card,.Top-brands-item2  .card,.Top-brands-item3  .card,.Top-brands-item4  .card,.Top-brands-item5  .card{
+        padding: 10px;
+        margin-left:5% ;
+
+    }  
+  
+    
+
+
+    
+}
+
+/*Top Brands*/
+
+
+/*sport collections*/
+.Sport-items{
+    display: flex;
+    overflow: auto;
+    gap: 4rem;
+    scroll-snap-type: x mandatory;
+    padding: 20px;
+
+}
+
+.Sport-item1,.Sport-item4,.Sport-item6,.Sport-item2,.Sport-item3,.Sport-item5,.Sport-item7,.Sport-item9,.Sport-item8{
+    scroll-snap-align: center;
+}
+.Sport-item1 img,.Sport-item2 img,.Sport-item3 img,.Sport-item4 img,.Sport-item5 img,.Sport-item6 img,.Sport-item7 img,.Sport-item8 img,.Sport-item9 img{
+     width: 320px;
+     align-self: center;
+    
+     object-fit: contain;
+     padding: auto 10px;
+}
+
+.Sport-items::-webkit-scrollbar{
+    display: none;
+}
+
+.Sport-collections .head1-bar,.Top-brands .head1-bar,.Home-Furniture .head1-bar{
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    padding:20px 10px;
+}
+
+/*TOp Brands*/
+.Top-brands-items,.Home-brands-items{
+    display: flex;
+    overflow: auto;
+    gap: 4rem;
+    scroll-snap-type: x mandatory;
+    padding: 20px;
+
+}
+
+.Top-Brands-item1,.Top-Brands-item4,.Top-Brands-item6,.Top-Brands-item2
+,.Top-Brands-item3,.Top-Brands-item5,.Top-Brands-item7,.Top-Brands-item9,.Top-Brands-item8{
+    scroll-snap-align: center;
+   
+}
+.Top-Brands-item1 img,.Top-Brands-item2 img,.Top-Brands-item3 img,.Top-Brands-item4 img,.Top-Brands-item5 img,
+.Top-Brands-item6 img,.Top-Brands-item7 img,.Top-Brands-item8 img,.Top-Brands-item9 img{
+     width: 370px;
+     align-self: center;
+     height: 350px;
+     object-fit: contain;
+     padding: 10px 30px;
+     border-radius: 50%;
+     background-color: rgb(37, 31, 31,0.2);
+}
+
+.Top-brands-items::-webkit-scrollbar,.Home-brands-items::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+
+
+
+
+/*Top Brands*/
+
+
+/*Home furniture*/
+
+.Home-Brands-item1,.Home-Brands-item4,.Home-Brands-item6,.Home-Brands-item2
+,.Home-Brands-item3,.Home-Brands-item5,.Home-Brands-item7,.Home-Brands-item9,.Home-Brands-item8{
+    scroll-snap-align: center;
+   
+}
+.Home-Brands-item1 img,.Home-Brands-item2 img,.Home-Brands-item3 img,.Home-Brands-item4 img,.Home-Brands-item5 img,
+.Home-Brands-item6 img,.Home-Brands-item7 img,.Home-Brands-item8 img,.Home-Brands-item9 img{
+     width: 370px;
+     align-self: center;
+     height: 350px;
+     object-fit: contain;
+     padding: 10px 30px;
+     
+}
+
+
+
+/*Home furniture*/
+body::-webkit-scrollbar{
+    display: none;
+}

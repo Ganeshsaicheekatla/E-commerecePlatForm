@@ -1,0 +1,155 @@
+.page-head{
+    height: 150px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to left, rgb(27, 7, 88) , rgb(35, 82, 238));
+    
+}
+.user-profile{
+ position: relative;
+ width: 60px;
+ height: 60px;
+ background-color: white;
+ border-radius: 50%;
+
+}
+
+
+.user{
+ width: 100px;
+ margin-top: 20px;
+}
+.user-name{
+  font-size: 23px;
+}
+.user-details{
+  width: 350px;
+  
+  float: right;
+  margin-right: 10px;
+  font-size: 30px;
+  position: absolute;
+  top:100px;
+  right: 150px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: none;
+
+  z-index: 1;
+ 
+}
+.btn{
+ width: 150px;
+ color: white;
+ font-size: 20px;
+}
+.head1-bar{
+     height: 60px;
+     width: 97%;
+    
+     border-radius: 10px;
+     
+     
+}
+.head-bar-content{
+   height: inherit;
+   font-size: 25px;
+   color: white;
+}
+.title{
+    font-size: 35px;
+    
+}
+.profile-btn .btn{
+  width: 90px;
+  height: 35px;
+  padding: 1px;
+  
+}
+.profile-btn{
+  margin-left:-18px ;
+}
+.user-profile span{
+ position: absolute;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  bottom: 0px;
+  top: 4px;
+  background-color: green;
+}
+.notification-icon span{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 57px;
+  background-color: red;
+
+}
+
+
+/*premiun subscription*/
+.premium-sub{
+ position: absolute;
+ top: 0;
+ display: none;
+ 
+ 
+ width: 100%;
+height: auto;
+ background: 	rgba(255, 255, 255);;
+}
+.pay-info{
+ 
+ z-index: 10;
+ 
+}
+.pay-info .btn{
+ 
+ width: 200px;
+}
+.pay-mode-head{
+ width: 100%;
+ color:white ;
+ background-image: linear-gradient(to left,rgb(16, 46, 242),rgb(48, 39, 175));
+ font-weight: 1000;
+ font-size: 40px;
+ height: 90px;
+}
+.pay-mode-head .fa{
+   font-size: 25px;
+}
+
+.terms-conditions{
+ font-size: 23px;
+ color: rgb(50, 4, 148);
+ font-weight: 700;
+
+}
+
+/*pay plans*/
+.pay-plans .pay-gold,.pay-gold .card footer{
+    width: 400px;
+    font-size: 30px;
+    font-weight: 800;
+    background-color: red ;
+    color: aliceblue;
+}
+.pre-buy{
+ height: 40px;
+ border-radius: 50%;
+ position: absolute;
+ font-size: 30px;
+ right: -20px;
+ color: blue;
+}
+.pay-mode-form .pay-close {
+    height: 32px;
+    font-size: 25px;
+   border-radius: 50%;
+   border:none;  
+   outline: none;
+   
+} 
+
+
